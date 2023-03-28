@@ -1,10 +1,9 @@
 import './App.css';
-import Combine from './userSide/pages/Combine';
 
 function App() {
   return (
     <div className="App">
-     <Combine />
+     <h1>Text</h1>
     </div>
   );
 }
