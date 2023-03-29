@@ -1,9 +1,11 @@
+
 import './App.css';
+import MainRoutes from './MainRoutes';
 
 function App() {
   return (
     <div className="App">
-     <h1>Text</h1>
+     <MainRoutes/>
     </div>
   );
 }
