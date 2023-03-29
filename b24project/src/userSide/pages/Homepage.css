@@ -1,0 +1,36 @@
+.purple{
+    height:250px;
+    width:100%;
+    border:0px solid black;
+    margin:auto;
+    background-color:#B266FF	;
+}
+
+.purple>h1{
+    padding-top:20px;
+    font-size:60px;
+    font-weight: bold;
+}
+.purple p{
+    font-size:20px;
+
+}
+.purple>button{
+    border:black;
+    
+}
+/* grid */
+
+.grid{
+    height:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0px;
+    width:100%;
+    margin:auto;
+}
+.grid>div{
+    height:400px;
+    width:100%;
+}
+
