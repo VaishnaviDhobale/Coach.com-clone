@@ -1,0 +1,15 @@
+
+.nav{
+    width:80%;
+    height:80px;
+    border:0px solid black;
+    align-items:center;
+    display:flex;
+    justify-content:space-evenly;
+    margin:auto;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color:white;
+
+    
+    
+}
