@@ -5,7 +5,7 @@ const links=[
     {path:"/",title:"HOME"},
     {path:"/New",title:"NEW"},
     {path:"/Shopby",title:"SHOP BY"},
-    {path:"/Women",title:"WOMEN"},
+    {path:"/Womens",title:"WOMENS"},
     {path:"/Men",title:"MEN"},
     {path:"/Bags",title:"BAGS"},
     {path:"/Bagiose(RE)",title:"BAGIOSE(RE)LOVED"},
