@@ -1,9 +1,10 @@
 import './App.css';
+import Womens from './userSide/pages/Womens';
 
 function App() {
   return (
     <div className="App">
-     <h1>Text</h1>
+      <Womens />
     </div>
   );
 }
