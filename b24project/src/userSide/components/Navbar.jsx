@@ -1,6 +1,7 @@
 import {NavLink} from "react-router-dom";
 import "./navbar.css";
 
+
 const links=[
     {path:"/",title:"HOME"},
     {path:"/New",title:"NEW"},
