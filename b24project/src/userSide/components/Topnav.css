@@ -1,8 +1,8 @@
 .topnav{
     border:0px solid black;
-    height:100px;
-    width:90%;
+    height:80px;
+    width:100%;
     margin:auto;
     background-color:white;
-    
+    position:fixed;
 }
