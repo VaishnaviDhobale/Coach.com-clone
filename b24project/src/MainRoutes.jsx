@@ -14,6 +14,7 @@ import BagioseInsider from "./userSide/pages/BagioseInsider";
 import Gifts from "./userSide/pages/Gifts";
 import Sale from "./userSide/pages/Sale";
 import Womens from "./userSide/pages/Womens"
+import Orders from './adminSide/pages/Orders'
 
 function MainRoutes(){
     return(
@@ -33,6 +34,7 @@ function MainRoutes(){
         <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/addProduct' element={<AddProduct/>} />
       <Route path='/productList' element={<ProductList/>} />
+      <Route path="/orders" element={<Orders/>} />
 
       </Routes> 
       
