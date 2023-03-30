@@ -1,4 +1,4 @@
-import {Link,NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "./navbar.css";
 
 const links=[
@@ -6,7 +6,7 @@ const links=[
     {path:"/New",title:"NEW"},
     {path:"/Shopby",title:"SHOP BY"},
     {path:"/Womens",title:"WOMENS"},
-    {path:"/Men",title:"MEN"},
+    {path:"/Mens",title:"MENS"},
     {path:"/Bags",title:"BAGS"},
     {path:"/Bagiose(RE)",title:"BAGIOSE(RE)LOVED"},
     {path:"/BagioseInsider",title:"BAGIOSE INSIDER"},

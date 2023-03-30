@@ -1,8 +1,21 @@
+import { Button } from "@chakra-ui/react";
+import { useContext } from "react";
+import { Context } from "../../ContextApi/CommanContext";
 
-import {Button} from "@chakra-ui/react";
+const Buttons = ({ children }) => {
+  // This context for handle page/pagination
+  let { page, handlePagination } = useContext(Context);
+  
+  return (
+    <Button
+      p="20px"
+      m="5px"
+      backgroundColor={children === page ? "gray" : ""}
+      onClick={() => handlePagination(+children)}
+    >
+      {children}
+    </Button>
+  );
+};
 
-const Buttons = ({children}) =>{
-    return <Button>{children}</Button>
-}
-
-export default Buttons
+export default Buttons;

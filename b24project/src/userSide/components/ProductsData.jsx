@@ -1,18 +1,26 @@
-import { Box, Spinner, Text, Img } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { Box, Spinner } from "@chakra-ui/react";
+import { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
+import { Context } from "../../ContextApi/CommanContext";
 import Pagination from "./Pagination";
+import ProductCard from "./ProductCard";
 
-const ProductsData = ({ getMethod, setTotalData }) => {
-  const [searchParams] = useSearchParams();
+const ProductsData = ({ getMethod }) => {
+  const [searchParams, setSearchparams] = useSearchParams();
+
+  // Handling this page using contextApi 
+  let {page} = useContext(Context)
+
+  // preparing params object here
   const paramObj = {
     params: {
       category: searchParams.getAll("category"),
-      _sort: "price",
-      _order: searchParams.get("_order"),
+      _page : page
     },
   };
+
+  // Accessing Store 
   const dispatch = useDispatch();
   const { isError, isLoading, womensData, totalData } = useSelector(
     (store) => store.womensReducer
@@ -20,28 +28,46 @@ const ProductsData = ({ getMethod, setTotalData }) => {
 
   useEffect(() => {
     dispatch(getMethod(paramObj));
-  }, [searchParams]);
+    if(searchParams.get("_order")){
+      paramObj.params["_order"] = searchParams.get("_order");
+      paramObj.params["_sort"] = "price"
+    }
+    setSearchparams(paramObj.params)
+  }, [searchParams,page]);
 
+
+  // Conditional Rendering 
   if (isLoading) {
     return <Spinner />;
   } else if (isError) {
     return <h1>Something went wrong</h1>;
   }
+
+
   return (
-    <>
-      <Box display={"grid"} gridTemplateColumns="repeat(4,1fr)" gap="5px" ml = "15%" borderLeft={"1px solid gray"} pl = "20px" >
+    <Box>
+      <Box
+        display={"grid"}
+        gridTemplateColumns={{
+          base : "repeat(2,1fr)",
+          sm : "repeat(2,1fr)",
+          md : "repeat(3,1fr)",
+          lg : "repeat(4,1fr)"
+        }}
+        gap="5px"
+        ml= {{
+          base : "20px",
+          sm : "20px",
+          md : "20px",
+          lg : "22%"
+        }}
+      >
         {womensData.map((item) => {
-          return (
-            <Box key={item.id} textAlign={"left"} w="90%"  mb = "20px">
-              <Img src={item.image} alt={item.title} h="300px" w="100%"></Img>
-              <Text fontWeight={"600"}>{item.title}</Text>
-              <Text fontWeight={"600"}>Rs {item.price}</Text>
-            </Box>
-          );
+          return <ProductCard {...item} />;
         })}
       </Box>
       <Pagination totalData={totalData} />
-    </>
+    </Box>
   );
 };
 

@@ -1,9 +1,9 @@
-import { REQUEST_FAILURE,REQUEST_PENDING, GET_REQUEST_SUCCESS, GET_REQUEST_SUCCESS_SIDE, CLEAR_FILTERS } from "./actionTypes";
+import { REQUEST_FAILURE,REQUEST_PENDING, GET_REQUEST_SUCCESS, GET_REQUEST_SUCCESS_SIDE } from "./actionTypes";
 
 
 const initialData = {
     sidebarData : [],
-    womensData : [],
+    mensData : [],
     totalData : 1,
     isLoading : false,
     isError : false
@@ -23,7 +23,7 @@ export const reducer = (state = initialData,{type,payload}) => {
             return {
                 ...state,
                 isLoading : false,
-                womensData : payload.data,
+                mensData : payload.data,
                 totalData : payload.totalData
             }
         }
@@ -41,12 +41,6 @@ export const reducer = (state = initialData,{type,payload}) => {
                 ...state,
                 isLoading : false,
                 isError : true
-            }
-        }
-
-        case CLEAR_FILTERS : {
-            return {
-                ...state
             }
         }
 
