@@ -1,0 +1,10 @@
+
+
+export const GET_ORDERS_REQUEST = "REQUEST_PENDING";
+export const GET_ORDERS_FAILURE = "REQUEST_FAILURE";
+export const GET_ORDERS_SUCCESS = "GET_REQUEST_SUCCESS";
+
+
+
+
+

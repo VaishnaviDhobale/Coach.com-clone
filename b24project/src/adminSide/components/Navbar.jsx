@@ -34,7 +34,9 @@ const Navbar = () => {
               <Link to="" className="nav-link active" aria-current="page" >
                 Bagiose
               </Link>
-              
+              <Link to="/orders" className="nav-link active" aria-current="page" >
+                Orders
+              </Link>
             </div>
           </div>
         </div>

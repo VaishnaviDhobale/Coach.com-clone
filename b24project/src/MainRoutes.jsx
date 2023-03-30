@@ -12,7 +12,32 @@ import BagioseRE from "./userSide/pages/Bagiose(RE)";
 import BagioseInsider from "./userSide/pages/BagioseInsider";
 import Gifts from "./userSide/pages/Gifts";
 import Sale from "./userSide/pages/Sale";
+
 import Womens from "./userSide/pages/Womens";
+
+import Womens from "./userSide/pages/Womens"
+import Orders from './adminSide/pages/Orders'
+
+function MainRoutes(){
+    return(
+        <Routes>
+        <Route path="/" element={<HomePage/>}></Route>
+        <Route path="/New" element={<New/>}></Route>
+        <Route path="/Shopby" element={<ShopBy/>}></Route>
+        
+        <Route path="/Men" element={<Men/>}></Route>
+        <Route path="/Womens" element={<Womens/>}></Route>
+
+        <Route path="/Bags" element={<Bags/>}></Route>
+        <Route path="/Bagiose(RE)" element={<BagioseRE/>}></Route>
+        <Route path="/BagioseInsider" element={<BagioseInsider/>}></Route>
+        <Route path="/Gifts" element={<Gifts/>}></Route>
+        <Route path="/Sale" element={<Sale/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>} />
+      <Route path='/addProduct' element={<AddProduct/>} />
+      <Route path='/productList' element={<ProductList/>} />
+      <Route path="/orders" element={<Orders/>} />
+
 
 function MainRoutes() {
   return (
