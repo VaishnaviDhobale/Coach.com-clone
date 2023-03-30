@@ -5,18 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
-import ChangeUrl from "./ChangeUrlContext/ChangeUrl.jsx";
 import { Provider } from "react-redux";
 import {Store} from "./redux/Store"
+import CommanContext from "./ContextApi/CommanContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store = {Store}>
      <BrowserRouter>
     <ChakraProvider>
-      <ChangeUrl>
+      <CommanContext>
         <App />
-      </ChangeUrl>
+      </CommanContext>
     </ChakraProvider>
   </BrowserRouter>
   </Provider>
