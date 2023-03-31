@@ -10,8 +10,8 @@ import Footer from './userSide/components/FooterSection';
 function App() {
   return (
     <div className="App">
-      <TopNavbar/>
-      <Navbar />
+    {/* `  <TopNavbar/>` */}
+      {/* <Navbar /> */}
      <MainRoutes/>
      {/* <Footer/> */}
 
