@@ -16,29 +16,15 @@ import Womens from "./userSide/pages/Womens";
 import Orders from "./adminSide/pages/Orders"; 
 import ProductDetails from "./userSide/components/ProductDetails";
 import Login from "./userSide/pages/Login";
+
+import EditProduct from "./adminSide/pages/EditProduct";
+
+
+import Users from "./adminSide/pages/Users";
+
 import Cart from "./userSide/pages/Cart"
-// function MainRoutes() {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<HomePage />}></Route>
-//       <Route path="/New" element={<New />}></Route>
-//       <Route path="/Shopby" element={<ShopBy />}></Route>
-//       <Route path="/Mens" element={<Men />}></Route>
-//       <Route path="/Womens" element={<Womens />}></Route>
-//       <Route path="/Bags" element={<Bags />}></Route>
-//       <Route path="/Bagiose(RE)" element={<BagioseRE />}></Route>
-//       <Route path="/BagioseInsider" element={<BagioseInsider />}></Route>
-//       <Route path="/Gifts" element={<Gifts />}></Route>
-//       <Route path="/Sale" element={<Sale />}></Route>
-//       <Route path="/dashboard" element={<Dashboard />} />
-//       <Route path="/addProduct" element={<AddProduct />} />
-//       <Route path="/productList" element={<ProductList />} />
-//       <Route path="/ProductDetails/:id" element={<ProductDetails />} />
 
-// import Womens from "./userSide/pages/Womens";
 
-// import Womens from "./userSide/pages/Womens"
-// import Orders from './adminSide/pages/Orders'
 
 function MainRoutes(){
     return(
@@ -58,7 +44,10 @@ function MainRoutes(){
         <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/addProduct' element={<AddProduct/>} />
       <Route path='/productList' element={<ProductList/>} />
+      <Route path='/edit/:id' element={<EditProduct/>} />
+
       <Route path="/orders" element={<Orders/>} />
+      <Route path="/users" element={<Users/>} />
        <Route path="/ProductDetails/:id" element={<ProductDetails/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path = "/cart" element = {<Cart />}></Route>
@@ -66,25 +55,7 @@ function MainRoutes(){
 
     }
 
-// function MainRoutes() {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<HomePage />}></Route>
-//       <Route path="/New" element={<New />}></Route>
-//       <Route path="/Shopby" element={<ShopBy />}></Route>
-//       <Route path="/Men" element={<Men />}></Route>
-//       <Route path="/Womens" element={<Womens />}></Route>
-//       <Route path="/Bags" element={<Bags />}></Route>
-//       <Route path="/Bagiose(RE)" element={<BagioseRE />}></Route>
-//       <Route path="/BagioseInsider" element={<BagioseInsider />}></Route>
-//       <Route path="/Gifts" element={<Gifts />}></Route>
-//       <Route path="/Sale" element={<Sale />}></Route>
-//       <Route path="/dashboard" element={<Dashboard />} />
-//       <Route path="/addProduct" element={<AddProduct />} />
-//       <Route path="/productList" element={<ProductList />} />
-//     </Routes>
-//   );
-// }
+
 
 
 

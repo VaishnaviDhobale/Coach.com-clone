@@ -9,4 +9,7 @@
     margin:auto;
     font-family: "Lucida Console", "Courier New", monospace;
     background-color:white;
+    position:sticky;
+    top:0;
+    z-index: 1;
 }
