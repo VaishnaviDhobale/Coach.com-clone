@@ -1,8 +1,21 @@
 .topnav{
-    border:0px solid black;
+    border:2px solid black;
     height:80px;
     width:100%;
     margin:auto;
     background-color:white;
     position:fixed;
+    display:grid;
+    grid-template-columns:repeat(5,1fr)
+}
+
+.topnav>div{
+    width:80px;
+    border:2px solid black;
+    
+}
+/* location logo */
+.location{
+    padding-top:10px;
+    size:80px;
 }
