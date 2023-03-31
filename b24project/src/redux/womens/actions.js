@@ -52,7 +52,6 @@ export const getWomensData =(paramsObj)=> async(dispatch) => {
   try {
     dispatch(requestPending());
     const apiData = await axios.get(`${womensUrl}/?_limit=16`,paramsObj);
-    console.log(apiData)
     dispatch(getRequestSuccess({data : apiData.data,totalData :apiData["headers"]["x-total-count"]}));
   } catch {
     dispatch(requestFailure());
