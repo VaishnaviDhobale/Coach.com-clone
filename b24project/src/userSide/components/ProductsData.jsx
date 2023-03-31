@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { Context } from "../../ContextApi/CommanContext";
 import Pagination from "./Pagination";
 import ProductCard from "./ProductCard";
+import Navbar from "../../userSide/components/Navbar";
 
 const ProductsData = ({ getMethod }) => {
   const [searchParams, setSearchparams] = useSearchParams();
@@ -46,6 +47,8 @@ const ProductsData = ({ getMethod }) => {
 
   return (
     <Box>
+      <Navbar />
+    <Box>
       <Box
         display={"grid"}
         gridTemplateColumns={{
@@ -67,6 +70,7 @@ const ProductsData = ({ getMethod }) => {
         })}
       </Box>
       <Pagination totalData={totalData} />
+    </Box>
     </Box>
   );
 };
