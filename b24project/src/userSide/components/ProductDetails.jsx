@@ -31,7 +31,8 @@ const ProductsDetails = () => {
 
   // Handling cart post here
   const handleCartPosting = () => {
-    dispatch(postCartData(data)).then(() => {
+    let test = {...data,qut:1}
+    dispatch(postCartData(test)).then(() => {
       toast({
         description: "Product Added To Cart",
         status: "success",

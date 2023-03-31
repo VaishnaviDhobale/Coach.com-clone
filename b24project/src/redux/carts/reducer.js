@@ -3,9 +3,9 @@ import {
   REQUEST_PENDING,
   GET_REQUEST_SUCCESS,
   POST_REQUEST_SUCCESS,
- 
+  DELETE_REQUEST_SUCCESS,
+  PATCH_REQUEST_SUCCESS
 } from "./actionTypes";
-
 
 const initialData = {
   cartData: [],
@@ -33,12 +33,26 @@ export const reducer = (state = initialData, { type, payload }) => {
     }
 
     case POST_REQUEST_SUCCESS: {
-        return {
-          ...state,
-          isLoading: false,
-          cartData :[...state.cartData,payload]
-        };
-      }
+      return {
+        ...state,
+        isLoading: false,
+        cartData: [...state.cartData, payload],
+      };
+    }
+
+    case PATCH_REQUEST_SUCCESS: {
+      return {
+        ...state,
+        isLoading: false,
+      };
+    }
+
+    case DELETE_REQUEST_SUCCESS: {
+      return {
+        ...state,
+        isLoading: false,
+      };
+    }
 
     case REQUEST_FAILURE: {
       return {
