@@ -5,7 +5,6 @@ import { useSearchParams } from "react-router-dom";
 import { Context } from "../../ContextApi/CommanContext";
 import Pagination from "./Pagination";
 import ProductCard from "./ProductCard";
-import Navbar from "../../userSide/components/Navbar";
 
 const ProductsData = ({ getMethod }) => {
   const [searchParams, setSearchparams] = useSearchParams();
@@ -47,31 +46,28 @@ const ProductsData = ({ getMethod }) => {
 
   return (
     <Box>
-      <Navbar />
-    <Box>
-      <Box
-        display={"grid"}
-        gridTemplateColumns={{
-          base : "repeat(2,1fr)",
-          sm : "repeat(2,1fr)",
-          md : "repeat(3,1fr)",
-          lg : "repeat(4,1fr)"
-        }}
-        gap="5px"
-        ml= {{
-          base : "20px",
-          sm : "20px",
-          md : "20px",
-          lg : "22%"
-        }}
-      >
-        {womensData.map((item) => {
-          return <ProductCard {...item} />;
-        })}
-      </Box>
-      <Pagination totalData={totalData} />
+    <Box
+      display={"grid"}
+      gridTemplateColumns={{
+        base : "repeat(2,1fr)",
+        sm : "repeat(2,1fr)",
+        md : "repeat(3,1fr)",
+        lg : "repeat(4,1fr)"
+      }}
+      gap="5px"
+      ml= {{
+        base : "20px",
+        sm : "20px",
+        md : "20px",
+        lg : "22%"
+      }}
+    >
+      {womensData.map((item) => {
+        return <ProductCard {...item} />;
+      })}
     </Box>
-    </Box>
+    <Pagination totalData={totalData} />
+  </Box>
   );
 };
 

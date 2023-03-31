@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCartData, getCartData } from "../../redux/carts/actions";
 import SingleCart from "../components/SingleCart";
-import Navbar from "../../userSide/components/Navbar";
 
 // import Sidebar from "../components/Sidebar";
 const { Box, Text } = require("@chakra-ui/react");
@@ -36,7 +35,6 @@ const Cart = () => {
   }, []);
   return (
     <Box>
-      <Navbar />
       <Box ml="20px">
         <Text fontSize="30px" fontWeight={"bold"} textAlign={"left"}>
           My Bag ( {totalData} - {total})
