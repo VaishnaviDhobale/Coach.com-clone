@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom";
 import "./navbar.css";
-
+ import { useAuth0 } from "@auth0/auth0-react";
 
 const links=[
     {path:"/",title:"HOME"},
@@ -13,11 +13,13 @@ const links=[
     {path:"/BagioseInsider",title:"BAGIOSE INSIDER"},
     {path:"/Gifts",title:"GIFTS"},
     {path:"/SALE",title:"SALE"},
+    // {path:"/login", title:"LOGIN"}
 ];
 
 
 //styling for navigation bar
 function Navbar(){
+   const { loginWithRedirect, isAuthenticated, logout, user} = useAuth0();
 
 
     const defaultLinkStyle={textDecoration:"none",color:"black"}
@@ -49,6 +51,15 @@ function Navbar(){
                 {title}
             </NavLink>
         ))}
+       
+        { isAuthenticated ? ( <button onClick={() => logout({ returnTo: window.location.origin })}>
+         LOGOUT 
+       </button>) :  
+        
+        (<button onClick={() => loginWithRedirect()}>LOGIN</button>)
+       
+          }
+          {/* {isAuthenticated && <p>Welcome ! {user.nickname}</p>} */}
       </div>
 
     )

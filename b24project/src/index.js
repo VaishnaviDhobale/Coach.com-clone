@@ -8,10 +8,19 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import {Store} from "./redux/Store"
 import CommanContext from "./ContextApi/CommanContext";
+import { Auth0Provider } from "@auth0/auth0-react";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Provider store = {Store}>
+  <Auth0Provider
+  domain="dev-rqcl8zma8nhzlth0.us.auth0.com"
+  clientId="4MAUWk57Z2kKjMXZIJx2M53FEZSnbIwP"
+  authorizationParams={{
+    redirect_uri: window.location.origin
+  }}> 
+<Provider store = {Store}>
      <BrowserRouter>
     <ChakraProvider>
       <CommanContext>
@@ -20,6 +29,12 @@ root.render(
     </ChakraProvider>
   </BrowserRouter>
   </Provider>
+
+
+</Auth0Provider>
+ 
+ 
+ 
  
 );
 

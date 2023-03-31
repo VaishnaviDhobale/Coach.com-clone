@@ -8,7 +8,7 @@ import {reducer as ordersReducer} from "./Orders/reducer"
 let rootReducer = combineReducers({
     womensReducer,
 
-    mensReducer
+    mensReducer,
 
     ordersReducer,
 })
