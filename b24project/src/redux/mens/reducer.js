@@ -4,7 +4,7 @@ import { REQUEST_FAILURE,REQUEST_PENDING, GET_REQUEST_SUCCESS, GET_REQUEST_SUCCE
 const initialData = {
     sidebarData : [],
     mensData : [],
-    totalData : 1,
+    totalData : 0,
     isLoading : false,
     isError : false
 }
