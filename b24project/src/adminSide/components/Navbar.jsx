@@ -28,7 +28,7 @@ const Navbar = () => {
               <Link to="/productList" className="nav-link active" aria-current="page" >
                 Product List
               </Link>
-              <Link to="" className="nav-link active" aria-current="page" >
+              <Link to="/users" className="nav-link active" aria-current="page" >
                 Users
               </Link>
               <Link to="" className="nav-link active" aria-current="page" >
@@ -37,6 +37,7 @@ const Navbar = () => {
               <Link to="/orders" className="nav-link active" aria-current="page" >
                 Orders
               </Link>
+              
             </div>
           </div>
         </div>
