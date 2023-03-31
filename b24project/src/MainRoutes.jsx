@@ -16,7 +16,14 @@ import Womens from "./userSide/pages/Womens";
 import Orders from "./adminSide/pages/Orders"; 
 import ProductDetails from "./userSide/components/ProductDetails";
 import Login from "./userSide/pages/Login";
+
 import EditProduct from "./adminSide/pages/EditProduct";
+
+
+import Users from "./adminSide/pages/Users";
+
+import Cart from "./userSide/pages/Cart"
+
 
 
 function MainRoutes(){
@@ -40,8 +47,10 @@ function MainRoutes(){
       <Route path='/edit/:id' element={<EditProduct/>} />
 
       <Route path="/orders" element={<Orders/>} />
+      <Route path="/users" element={<Users/>} />
        <Route path="/ProductDetails/:id" element={<ProductDetails/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path = "/cart" element = {<Cart />}></Route>
       </Routes>)
 
     }

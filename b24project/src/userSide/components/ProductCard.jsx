@@ -46,6 +46,8 @@ const ProductCard = ({ id, image, title, price }) => {
         onMouseLeave={() => handleDeleteHover()}
         position="relative"
         cursor="pointer"
+        // h = "450px"
+        // border = "1px solid red"
       >
         <Img src={image} alt={title} h= {{
           base : "200px",
@@ -75,22 +77,24 @@ const ProductCard = ({ id, image, title, price }) => {
             backgroundColor="#f7f7f7"
             onClick={onOpen}
           >
-            Show Quick View
+            Quick View
           </Text>
         )}
         <Text fontWeight={"600"} mt="20px">
-          {title}
+          {title.substring(0,23)}...
         </Text>
         <Box>
           <Text fontWeight={"600"} mt="-10px">
             Rs {price}
           </Text>
-          <Link to={`/ProductDetails/${id}`}>
+          <Link to={`/ProductDetails/${id}`} position = "absolute" top = "0px">
             <Button
               onMouseEnter={() => setShowQu(false)}
               onMouseLeave={() => setShowQu(true)}
               fontWeight={"600"}
               mt="-10px"
+              // position = "absolute"
+              // bottom = "0px"
             >
               Show More
             </Button>

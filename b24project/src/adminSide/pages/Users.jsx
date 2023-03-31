@@ -1,14 +1,15 @@
+
 import React from 'react'
 import Navbar from "../../adminSide/components/Navbar"
-import OrderManagement from '../components/OrderManagement';
+import UserManagement from '../components/UserManagement';
 
-function Orders() {
+function Users() {
   return (
     <div>
         <Navbar/>
-       <OrderManagement/>
+       <UserManagement/>
     </div>
   )
 }
 
-export default Orders;
+export default Users;

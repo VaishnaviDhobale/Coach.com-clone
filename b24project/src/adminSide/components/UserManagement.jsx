@@ -1,8 +1,10 @@
+
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 
-const OrderManagement = () => {
-     const [orders,setOrders]=useState([]);
+const UserManagement = () => {
+     const [users,setUsers]=useState([]);
+
      useEffect(()=>{
    
      },[]);
@@ -11,9 +13,9 @@ const OrderManagement = () => {
 
   return (
     <div style={{marginTop:"5%"}}>
-        ORDER MANAGEMENT
+        USER MANAGEMENT
     </div>
   )
 }
 
-export default OrderManagement;
+export default UserManagement;
