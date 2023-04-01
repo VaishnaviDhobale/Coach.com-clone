@@ -11,7 +11,7 @@ const HomePage=(props)=>{
     
         const slides=[{image:`https://images.coach.com/is/image/Coach/225_mti_a0?$imageRec$`},
         {image:`https://images.coach.com/is/image/Coach/ca193_b4bk_a0?$imageRec$`},
-        {image:`https://images.coach.com/is/image/Coach/ch813_b4bk_a0?$imageRec$https://images.coach.com/is/image/Coach/ch813_b4bk_a0?$imageRec$`},
+        {image:`https://images.coach.com/is/image/Coach/c3880_v5ebv_a0?$imageRec$`},
         {image:`https://images.coach.com/is/image/Coach/5789_b4ar2_a0?$imageRec$`},
         {image:`https://images.coach.com/is/image/Coach/c3489_b4bk_a0?$imageRec$`},
         {image:`https://images.coach.com/is/image/Coach/c8568_b4nq4_a0?$imageRec$`},
@@ -101,9 +101,8 @@ const HomePage=(props)=>{
            slides.map((slide,index)=>{
                 return(
 <div className="slider-card" key={index}>
-    {/* <div className="slide-img" style={{backgroundImage:`url(${slide.image})`}}></div>
-     */}
-<img src="https://images.coach.com/is/image/Coach/ch813_b4bk_a0?$imageRec$"/>
+    <img  src={slide.image}/>
+{/* <img src="https://images.coach.com/is/image/Coach/ch813_b4bk_a0?$imageRec$"/> */}
 
 </div>
 
