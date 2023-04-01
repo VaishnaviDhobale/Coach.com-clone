@@ -1,5 +1,8 @@
 import {
   ADD_REQUEST_SUCCESS,
+  DELETE_REQUEST_SUCCESS,
+  GET_REQUEST_SUCCESS,
+  PATCH_REQUEST_SUCCESS,
   REQUEST_LOADING,
   REQUEST_PENDING,
 } from "./actionType";
@@ -9,7 +12,7 @@ const initialState = {
   isError: false,
   products: [],
 };
-export const reducer = (state=initialState, action) => {
+export const reducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case REQUEST_LOADING:
@@ -28,6 +31,18 @@ export const reducer = (state=initialState, action) => {
         isLoading: false,
         isError: true,
       };
+
+    case GET_REQUEST_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        products: payload,
+      };
+    case PATCH_REQUEST_SUCCESS:
+      return { ...state, isLoading: false };
+
+      case DELETE_REQUEST_SUCCESS:
+        return{...state, isLoading: false}
     default:
       return state;
   }

@@ -1,12 +1,15 @@
-import { Text, Box, Img, Select, Button } from "@chakra-ui/react";
+import { Text, Box, Img, Select, Button, useToast } from "@chakra-ui/react";
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../../ContextApi/CommanContext";
 import { BsStarFill } from "react-icons/bs";
+import { postCartData } from "../../redux/carts/actions";
+import { useDispatch } from "react-redux";
 
 const ProductsDetails = () => {
-  // Getting product id from url 
+  let toast = useToast();
+  // Getting product id from url
   const id = +useParams("id").id;
 
   // Accessing urlKey (This Context for getting correct data from server like "womens", "mens")
@@ -21,23 +24,43 @@ const ProductsDetails = () => {
     setData(data.data);
   };
 
+  // Getting cart detail from store
+  const dispatch = useDispatch();
+  // const datas = useSelector((store)=>store.cartReducer);
+  // console.log(datas)
+
+  // Handling cart post here
+  const handleCartPosting = () => {
+    let test = {...data,qut:1}
+    dispatch(postCartData(test)).then(() => {
+      toast({
+        description: "Product Added Successfully",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    });
+  };
   useEffect(() => {
     getData();
   }, []);
 
   return (
     <Box>
-      <Box display={"grid"} gridTemplateColumns= {{
-        base : "repeat(1,1fr)",
-        sm : "repeat(1,1fr)",
-        md : "repeat(1,1fr)",
-        lg : "60% 1fr"
-      }} gap="20px"
-      m = {{
-        base : "0px 20px",
-        sm : "0px 20px",
-        md : "0px 0px"
-      }}
+      <Box
+        display={"grid"}
+        gridTemplateColumns={{
+          base: "repeat(1,1fr)",
+          sm: "repeat(1,1fr)",
+          md: "repeat(1,1fr)",
+          lg: "60% 1fr",
+        }}
+        gap="20px"
+        m={{
+          base: "0px 20px",
+          sm: "0px 20px",
+          md: "0px 0px",
+        }}
       >
         <Box width="100%" backgroundColor="#f1f1f1" m="auto" mt="0px">
           <Img m="auto" width="50%" src={data.image}></Img>
@@ -67,7 +90,7 @@ const ProductsDetails = () => {
               <BsStarFill size="20px" />
             </Box>
             <Text ml="10px" position={"relative"} bottom="2px">
-              ( {Math.floor(Math.random() * 10)} )
+              ( {Math.floor(Math.random() * 100)} )
             </Text>
           </Box>
           <Text textAlign={"left"}>
@@ -76,18 +99,29 @@ const ProductsDetails = () => {
             repudiandae, magnam modi omnis maxime enim, repellat sequi aliquam
             eaque perspiciatis voluptatibus veritatis minima? A?
           </Text>
-          <Box>
-            <Select
-              name=""
-              id=""
-              style={{ border: "1px solid gray", height: "50px" }}
-            >
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-            </Select>
+          <Box
+            display={"grid"}
+            gridTemplateColumns={"20% 1fr 1fr"}
+            gap="20px"
+            // border = "1px solid red"
+          >
+            <Box position={"relative"} top="22px">
+              <Select
+                name=""
+                id=""
+                style={{
+                  border: "1px solid gray",
+                  height: "50px",
+                  width: "100%",
+                }}
+              >
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </Select>
+            </Box>
             <Button
               backgroundColor={"black"}
               color="white"
@@ -96,6 +130,16 @@ const ProductsDetails = () => {
               h="55px"
             >
               I WANT IT
+            </Button>
+            <Button
+              backgroundColor={"black"}
+              color="white"
+              m="20px 0px"
+              w="100%"
+              h="55px"
+              onClick={handleCartPosting}
+            >
+              ADD TO CART
             </Button>
           </Box>
 
@@ -114,22 +158,30 @@ const ProductsDetails = () => {
             <Text textAlign={"left"}>
               Insiders Give Back We’ll donate $2.25 of your purchase to the
               cause of your choice when you sign in or sign up for Coach Insider
-              Powered.
+              Powered. It's the perfect retro chic bag to go with any loungewear
+              outfit that is a relaxed fit
             </Text>
           </Box>
         </Box>
-
       </Box>
-        <Box mt = "30px" mb = "40px">
-          <Box>
-            <Text fontWeight={"bold"} fontSize="70px">
-              We look good together.
-            </Text>
-            <Text fontWeight={"600"} fontSize = "20px">Keep carrying (and tagging) @coach. #CoachNY</Text>
-            <a target = "blank" href = "https://www.instagram.com/"><Text textDecoration = "underline">FOLLOW US ON INSTAGRAM</Text></a>
-            <Img m = "auto" mt = "90px" src = "https://cdn.wyng.com/54ac3103ef95a67c1cff8ef2/64066ef802458501678c1d4d.JPEG"></Img>
-          </Box>
+      <Box mt="30px" mb="40px">
+        <Box>
+          <Text fontWeight={"bold"} fontSize="70px">
+            We look good together.
+          </Text>
+          <Text fontWeight={"600"} fontSize="20px">
+            Keep carrying (and tagging) @coach. #CoachNY
+          </Text>
+          <a target="blank" href="https://www.instagram.com/">
+            <Text textDecoration="underline">FOLLOW US ON INSTAGRAM</Text>
+          </a>
+          <Img
+            m="auto"
+            mt="90px"
+            src="https://cdn.wyng.com/54ac3103ef95a67c1cff8ef2/64066ef802458501678c1d4d.JPEG"
+          ></Img>
         </Box>
+      </Box>
     </Box>
   );
 };

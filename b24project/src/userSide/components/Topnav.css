@@ -1,8 +1,34 @@
 .topnav{
-    border:0px solid black;
-    height:80px;
+    border:2px solid black;
+    height:70px;
     width:100%;
     margin:auto;
     background-color:white;
     position:fixed;
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    z-index:1;
+}
+
+
+/* location logo */
+.location{
+    padding-top:20px;
+    size:50px;
+}
+/* button green */
+.topnav>Button{
+    background-color:green;
+    border-radius:20px;
+    margin-top:10px;
+    width:80px;
+    color:white;
+    font-size:12px;
+    margin-left:40px;
+
+}
+.topnav>img{
+    margin-left:500px;
+    width:19%;
+    margin-bottom:20px;
 }

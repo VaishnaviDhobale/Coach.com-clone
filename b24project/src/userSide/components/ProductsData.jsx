@@ -46,28 +46,28 @@ const ProductsData = ({ getMethod }) => {
 
   return (
     <Box>
-      <Box
-        display={"grid"}
-        gridTemplateColumns={{
-          base : "repeat(2,1fr)",
-          sm : "repeat(2,1fr)",
-          md : "repeat(3,1fr)",
-          lg : "repeat(4,1fr)"
-        }}
-        gap="5px"
-        ml= {{
-          base : "20px",
-          sm : "20px",
-          md : "20px",
-          lg : "22%"
-        }}
-      >
-        {womensData.map((item) => {
-          return <ProductCard {...item} />;
-        })}
-      </Box>
-      <Pagination totalData={totalData} />
+    <Box
+      display={"grid"}
+      gridTemplateColumns={{
+        base : "repeat(2,1fr)",
+        sm : "repeat(2,1fr)",
+        md : "repeat(3,1fr)",
+        lg : "repeat(4,1fr)"
+      }}
+      gap="5px"
+      ml= {{
+        base : "20px",
+        sm : "20px",
+        md : "20px",
+        lg : "22%"
+      }}
+    >
+      {womensData.map((item) => {
+        return <ProductCard {...item} />;
+      })}
     </Box>
+    <Pagination totalData={totalData} />
+  </Box>
   );
 };
 

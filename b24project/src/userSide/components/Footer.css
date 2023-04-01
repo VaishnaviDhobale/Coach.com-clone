@@ -8,6 +8,10 @@
     padding-top:40px;
     padding-left:30px;
     padding-bottom:40px;
+
+    margin-top:50px;
+    margin-top: 50px;
+
     
 
 
@@ -49,4 +53,10 @@
     width:50%;
     margin:auto;
 
+}
+.footer>div>Button{
+    background-color:black;
+    color:white;
+    height:26px;
+    
 }
