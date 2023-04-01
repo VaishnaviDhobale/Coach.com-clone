@@ -1,4 +1,3 @@
-
 import {
   Box,
   Img,
@@ -11,16 +10,22 @@ import {
   ModalBody,
   ModalFooter,
   Select,
+  useToast,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsStarFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-
+import { useDispatch } from "react-redux";
+import { postWishlistData } from "../../redux/wishlist/actions";
+import { Context } from "../../ContextApi/CommanContext";
 
 const ProductCard = ({ id, image, title, price }) => {
-  // this "shoeQu" for the "quick view hover" 
+  let { urlKey } = useContext(Context);
+  const toast = useToast();
+  const dispatch = useDispatch();
+  // this "shoeQu" for the "quick view hover"
   const [showQu, setShowQu] = useState(false);
 
   const handleHover = () => {
@@ -35,6 +40,23 @@ const ProductCard = ({ id, image, title, price }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [scrollBehavior] = useState("inside");
 
+  // Handling add wishlist
+  const handleAddWishlist = (id) => {
+    const data = {
+      id,
+      image,
+      title,
+      price,
+      qut: 1,
+    };
+    dispatch(postWishlistData(data));
+    toast({
+      description: "Product Added Successfully",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
+  };
   return (
     <>
       <Box
@@ -49,18 +71,24 @@ const ProductCard = ({ id, image, title, price }) => {
         // h = "450px"
         // border = "1px solid red"
       >
-        <Img src={image} alt={title} h= {{
-          base : "200px",
-          sm : "250px",
-          md : "250px",
-          lg : "300px"
-        }} w="100%"></Img>
+        <Img
+          src={image}
+          alt={title}
+          h={{
+            base: "200px",
+            sm: "250px",
+            md: "250px",
+            lg: "300px",
+          }}
+          w="100%"
+        ></Img>
         <Box
           position={"absolute"}
           top="5px"
           right={"5px"}
           onMouseEnter={() => setShowQu(false)}
           onMouseLeave={() => setShowQu(true)}
+          onClick={() => handleAddWishlist(id, image, title, price)}
         >
           <AiOutlineHeart size={"26px"} color="#8a8c8f" />
         </Box>
@@ -81,13 +109,13 @@ const ProductCard = ({ id, image, title, price }) => {
           </Text>
         )}
         <Text fontWeight={"600"} mt="20px">
-          {title.substring(0,23)}...
+          {title.substring(0, 23)}...
         </Text>
         <Box>
           <Text fontWeight={"600"} mt="-10px">
             Rs {price}
           </Text>
-          <Link to={`/ProductDetails/${id}`} position = "absolute" top = "0px">
+          <Link to={`/ProductDetails/${id}`} position="absolute" top="0px">
             <Button
               onMouseEnter={() => setShowQu(false)}
               onMouseLeave={() => setShowQu(true)}
@@ -115,12 +143,16 @@ const ProductCard = ({ id, image, title, price }) => {
           <ModalCloseButton />
 
           <ModalBody pt="40px">
-            <Box display={"flex"} flexDirection = {{
-              base : "column",
-              sm : "row",
-              md : "row",
-              lg : "row"
-            }} gap="20px">
+            <Box
+              display={"flex"}
+              flexDirection={{
+                base: "column",
+                sm: "row",
+                md: "row",
+                lg: "row",
+              }}
+              gap="20px"
+            >
               <Img width="50%" src={image}></Img>
               <Box>
                 <Text fontWeight="600" fontSize="22px">
