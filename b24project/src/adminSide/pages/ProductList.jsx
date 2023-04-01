@@ -6,24 +6,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/products/action";
 import { useLocation, useSearchParams } from "react-router-dom";
 const ProductList = () => {
-  const [searchParam] = useSearchParams()
-  const location = useLocation()
+  const [searchParam] = useSearchParams();
+  const location = useLocation();
   const dispatch = useDispatch();
   const { isLoading, products } = useSelector((store) => {
     return store.productsReducer;
   });
   // console.log(products);
   let obj = {
-    params:{ 
-        category:searchParam.getAll("category")
-    }
-}
+    params: {
+      category: searchParam.getAll("category"),
+    },
+  };
+
   useEffect(() => {
     dispatch(getProducts(obj));
   }, [location.search]);
 
   if (isLoading) {
-    return <Spinner size="xl" mt={'20%'} />;
+    return <Spinner size="xl" mt={"20%"} />;
   }
   return (
     <>
