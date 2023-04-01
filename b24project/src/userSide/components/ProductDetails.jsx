@@ -4,8 +4,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../../ContextApi/CommanContext";
 import { BsStarFill } from "react-icons/bs";
-import { getCartData, postCartData } from "../../redux/carts/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { postCartData } from "../../redux/carts/actions";
+import { useDispatch } from "react-redux";
 
 const ProductsDetails = () => {
   let toast = useToast();
@@ -34,7 +34,7 @@ const ProductsDetails = () => {
     let test = {...data,qut:1}
     dispatch(postCartData(test)).then(() => {
       toast({
-        description: "Product Added To Cart",
+        description: "Product Added Successfully",
         status: "success",
         duration: 9000,
         isClosable: true,

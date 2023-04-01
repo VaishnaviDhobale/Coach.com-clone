@@ -1,9 +1,7 @@
 import { Box, Img, Text, Select } from "@chakra-ui/react";
-import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { getCartData, patchCartData } from "../../redux/carts/actions";
 import { useDispatch } from "react-redux";
-
 const SingleCart = ({
   title,
   price,
@@ -12,14 +10,16 @@ const SingleCart = ({
   category,
   handleDeleteCart,
   qut,
-  paramObj
+  paramObj,
 }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
   const handleTotalPrice = (e) => {
-    dispatch(patchCartData(id,{qut : +e.target.value})).then(()=>{
-      dispatch(getCartData(paramObj))
-    })
-};
+    dispatch(patchCartData(id, { qut: +e.target.value })).then(() => {
+      dispatch(getCartData(paramObj));
+    });
+  };
+
   return (
     <Box mb="30px" position={"relative"}>
       <Box
@@ -30,13 +30,13 @@ const SingleCart = ({
         p="5px"
         borderRadius={"50%"}
         cursor={"pointer"}
-        onClick = {()=>handleDeleteCart(id)}
+        onClick={() => handleDeleteCart(id)}
       >
         <AiOutlineClose />
       </Box>
       <Box
         // border="1px solid red"
-        boxShadow="rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"
+        boxShadow="rgba(0, 0, 0, 0.05) 0px 0px 0px 1px"
         display={"flex"}
         gap="20px"
         h="150px"
@@ -47,10 +47,12 @@ const SingleCart = ({
             {title}
           </Text>
           <Text fontWeight={"600"}>{category}</Text>
-          <Text>
-            Rs {price}{" "}
-            <span style={{ fontWeight: "bold", color: "green" }}>Only</span>
-          </Text>
+          <Box display={"flex"}>
+            <Text>
+              Rs {price}{" "}
+              <span style={{ fontWeight: "bold", color: "green" }}>Only</span>
+            </Text>
+          </Box>
         </Box>
         <Box
           display="grid"
@@ -59,12 +61,12 @@ const SingleCart = ({
           mt="20px"
         >
           <Select onChange={(e) => handleTotalPrice(e)}>
-          <option value={qut}>{qut}</option>
+            <option value={qut}>{qut}</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>  
+            <option value="5">5</option>
           </Select>
           <Text
             position={"relative"}
