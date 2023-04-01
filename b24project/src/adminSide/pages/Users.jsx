@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Navbar from "../../adminSide/components/Navbar"
+import Navbar from '../components/Navbar';
 import UserManagement from '../components/UserManagement';
 
 function Users() {

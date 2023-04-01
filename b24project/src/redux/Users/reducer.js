@@ -20,7 +20,7 @@ export const reducer = (state = initialData,{type,payload}) => {
             return {
                 ...state,
                 isLoading : false,
-                users : payload.data,
+                users : payload,
             }
         }
 

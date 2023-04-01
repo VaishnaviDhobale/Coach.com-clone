@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from "../../adminSide/components/Navbar"
+import Navbar from '../components/Navbar';
 import OrderManagement from '../components/OrderManagement';
 
 function Orders() {
