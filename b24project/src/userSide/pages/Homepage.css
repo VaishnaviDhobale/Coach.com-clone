@@ -209,17 +209,17 @@ margin-left:10px;
     
 }
 
-.graygrid>div h1{
+.graygrid>div>h1{
     text-align:center;
     font-size: 20px;
     padding-top:7px;
 }
-.graygrid>div p{
+.graygrid>div>p{
     text-align:center;
     font-style:inherit;
     background-color:#F5F5F5;
 }
-.graygrid>div img{
+.graygrid>div>img{
     width:70%;
     text-align:center;
     padding-top:22px;
@@ -262,23 +262,48 @@ margin-left:10px;
 
 /* media screening */
 
-@media all and (min-width:451px) and (max-width:750px) {
-    .purple{
+@media all and (min-width:650px) and (max-width:950px) {
+    .purple>h1{
         flex-direction: column;
         text-align:center;
-        font-size:xx-small;
-        font-weight: 50;
+        font-size:large;
+        
+    
+        
+    }
+    .purple>p{
+        flex-direction: column;
+        text-align:center;
+        font-size:large;
+        
+
+    }
+    .purple{
+        width:100%;
     }
     
 }
 
-@media all and (min-width:100px) and (max-width:450px) {
-    .purple{
+@media all and (min-width:350px) and (max-width:650px) {
+    .purple>h1{
         flex-direction: column;
         text-align:center;
-        font-size:xx-small;
-        font-weight: 50;
+        font-size:small;
+    
     }
+    .purple>p{
+        flex-direction: column;
+        text-align:center;
+        font-size:small;
+
+    }
+    .purple>div{
+        flex-direction:column;
+    }
+    .purple{
+        width:100%;
+    }
+    
     
 }
 
@@ -286,12 +311,18 @@ margin-left:10px;
 @media all and (min-width:451px) and (max-width:750px) {
     .grid{
         grid-template-columns:repeat(2,1fr);
+        height:fit-content;
+        padding-bottom:70px;
+        width:100%;
     }
 }
 
 @media all and (min-width:100px) and (max-width:450px) {
     .grid{
         grid-template-columns:repeat(1,1fr);
+        height:fit-content;
+        padding-bottom:30px;
+        width:100%;
     }
 }
 /* camp section */
@@ -300,21 +331,73 @@ margin-left:10px;
 @media all and (min-width:451px) and (max-width:750px) {
     .camp{
         flex-direction: column;
-        text-align:center;
-        font-size:xx-small;
-        font-weight: 50;
+        height:fit-content;
+        width:100%;
+    
     }
+    .camp>button{
+        flex-direction: column;
+        font-size:smaller;
+        width: 120px;
+        font-size:12px;
+        margin-left:60px;
+    
+
+    }
+    .camp>h1{
+        flex-direction: column;
+        text-align:center;
+        font-size:small;
+        margin-left:50px
+    }
+    .camp>p{
+        flex-direction: column;
+        text-align:center;
+        font-size:large;
+        margin-left:50px;
+    
+    }
+    .camp>button{
+        flex-direction: column;
+        font-size:smaller;
+        width: 120px;
+        font-size:11px;
+    
+    }
+
+
     
 }
 
 @media all and (min-width:100px) and (max-width:450px) {
     .camp{
         flex-direction: column;
-        text-align:center;
-        font-size:xx-small;
-        font-weight: 50;
+        height:200px;
+        padding-top:160px;
+        padding-bottom:170px;
+        padding-left:60px;
+        width:100%;
         
     }
+    .camp>h1{
+        flex-direction: column;
+        text-align:center;
+        font-size:small;
+        margin-left:18px;
+    }
+    .camp>p{
+        flex-direction: column;
+        text-align:center;
+        font-size:large;
+        margin-left:18px;
+    }
+    .camp>button{
+        flex-direction: column;
+        width: 120px;
+        font-size:11px;
+    
+    }
+
     
 }
 /* bagz */
@@ -323,27 +406,181 @@ margin-left:10px;
 @media all and (min-width:451px) and (max-width:750px) {
     .bagz{
         grid-template-columns:repeat(3,1fr);
+        padding-top:100px;
+        height:fit-content;
+        width:100%;
+
     }
     .bagz>div>button{
         flex-direction: column;
         font-size:smaller;
-        width: 120px;
-        font-size:11px;
+        width: 140px;
         margin-bottom:90px;
+        text-align:center;
+        font-size:13px;
+    
+    
     }
+    .bagz>div>img{
+        width:40%;
+    }
+    
 }
 
 
 @media all and (min-width:150px) and (max-width:470px) {
     .bagz{
         grid-template-columns:repeat(2,1fr);
+        height:fit-content;
+        width:100%;
+    
 
     }
+
+    .bagz>div>button{
+        flex-direction: column;
+        font-size:smaller;
+        width: 125px;
+        font-size:11px;
+
+    
+    }
+    .bagz>div>img{
+        width:30%
+    }
+
 }
 
 @media all and (min-width:100px) and (max-width:450px) {
     .bagz{
         grid-template-columns:repeat(1,1fr);
+        height:fit-content;
+        padding-top:100px;
+        width:100%;
+    }
+    .bagz>div>button{
+        flex-direction: column;
+        font-size:smaller;
+        width: 100px;
+        font-size:10px;
+        margin-bottom:90px;
+        
+    }
+    .bagz>div>img{
+        width:20%;
+    }
+
+
+}
+
+/* text-box */
+
+
+@media all and (min-width:200px) and (max-width:653px) {
+    .textbox>h1{
+        
+        flex-direction:column;
+        text-align:center;
+        font-size:large;
+    height:max-content;
+    }
+    .textbox{
+        width:100%;
     }
 }
+@media all and (min-width:100px) and (max-width:450px) {
+    .textbox>h1{
+ flex-direction:column;
+        text-align:center;
+        font-size:large;
+        height:max-content;
+        width:100%;
+    }
+}
+
+/* slider */
+@media all and (min-width:200px) and (max-width:653px) {
+    #main-slider-container{
+        flex-direction:column;  
+
+    }
+    #slider{
+        flex-direction:column;
+    }
+}
+@media all and (min-width:100px) and (max-width:450px) {
+    #main-slider-container{
+ flex-direction:column;
+
+    }
+    #slider{
+        flex-direction:column;
+    }
+}
+
+
+/* gray */
+@media all and (min-width:150px) and (max-width:470px) {
+    .gray{
+        width:100%;
+        text-align:center;
+    }
+    .gray>h1{
+        text-align:center;
+        font-size:small;       
+}
+}
+
+@media all and (min-width:200px) and (max-width:450px) {
+    
+    .gray>h1{
+        text-align:center;
+        font-size:small;
+    }
+}
+
+
+/* gray-grid */
+
+
+
+@media all and (min-width:300px) and (max-width:570px) {
+    .graygrid{
+    
+       grid-template-columns:repeat(2,1fr);
+
+    }
+    
+    .graygrid>div>h1{
+        text-align:center;
+        font-size: small;
+    }
+    .graygrid>div>p{
+        text-align:center;
+        font-size: small;
+    }
+    .graygrid>div>img{
+        width:60%;
+    }
+    
+}
+
+@media all and (min-width:100px) and (max-width:250px) {
+    .graygrid{
+       grid-template-columns:repeat(1,1fr);
+       height:fit-content;
+
+    }
+    
+    
+    .graygrid>div>p{
+        text-align:center;
+        font-size:small;
+        width:30%;
+    }
+}
+
+
+
+
 
