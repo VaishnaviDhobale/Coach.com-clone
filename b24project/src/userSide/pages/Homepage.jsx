@@ -72,7 +72,7 @@ const HomePage=(props)=>{
         {/* FIVE BAG SECTION */}
         <div className="bagz">
             <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby1_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px" > SHOP TABBY WRISLET</Button></div>
-            <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby2_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY MESSENGER</Button></div>
+            <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby2_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY REAL</Button></div>
             <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby3_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP PILLOW BABY</Button></div>
             <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby4_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY BOX BAG</Button></div>
             <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby5_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY 26</Button></div>
@@ -130,11 +130,11 @@ const HomePage=(props)=>{
             <div><img src="https://cms.coach.com/i/coach/icon-bopus.png"/><h1>More Ways to Shop</h1><p>When a friend makes their first purchase of $250. (Get $30 if you sign in or sign up to be an Insider!)</p></div>
             <div><img src="https://cms.coach.com/i/coach/icon-invite-friend.png"/><h1>Give $20, get $20.</h1><p>Instant rewards & more good things.</p></div>
             <div><img src="https://cms.coach.com/i/coach/coach-insider-hp-icon"/><h1>Coach Insider</h1><p>Complimentary gift wrap and more.</p></div>
-            <div><p></p></div>
+            {/* <div><p></p></div>
             <div><p></p></div>
             <div><img src="https://cms.coach.com/i/coach/icon-gift-services.png"/><h1>Gift Services</h1><p>Complimentary gift wrap and more.</p></div>
             <div><p></p></div>
-            <div><p></p></div>
+            <div><p></p></div> */}
         </div>
         
         

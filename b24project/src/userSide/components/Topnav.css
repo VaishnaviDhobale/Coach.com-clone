@@ -1,15 +1,42 @@
 .topnav{
-    border:2px solid black;
+    border:0px solid black;
     height:70px;
     width:100%;
     margin:auto;
     background-color:white;
     position:fixed;
-    display:grid;
+    display:flex;
+    justify-content:space-between;
     grid-template-columns:repeat(8,1fr);
     z-index:1;
 }
-
+.topnav>div{
+    display:flex;
+    border:0px solid black;
+    margin-right:30px;
+    padding-top:10px;
+    
+}
+.topnav>div>button{
+    background-color:#B266FF;
+    margin-top:3px;
+    margin-right:2px;
+    margin-bottom:6px;
+    border:1px solid black;
+}
+.topnav>div>button:hover{
+    background-color:black;
+    color:white;
+}
+.topnav>div>input{
+    height:40px;
+    margin-top:3.5px;
+    
+}
+.topnav>div>img{
+    width:70%;
+    padding-left:13px;
+}
 
 /* location logo */
 .location{
@@ -31,4 +58,14 @@
     margin-left:500px;
     width:19%;
     margin-bottom:20px;
+}
+
+
+/* media screening */
+
+@media only screen and (max-width:600px){
+    .topnav{
+        flex-direction:column;
+    }
+    
 }
