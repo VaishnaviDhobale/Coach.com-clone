@@ -51,8 +51,9 @@ export const getWishlistData =(paramsObj)=> async(dispatch) => {
 export const postWishlistData =(obj)=> async(dispatch) => {
 
   try {
-    dispatch(requestPending());
+    // dispatch(requestPending());
     const apiData = await axios.post(`${wishlistUrl}`,obj);
+    // console.log(apiData.data)
     dispatch(postRequestSuccess(apiData.data));
   } catch {
     dispatch(requestFailure());

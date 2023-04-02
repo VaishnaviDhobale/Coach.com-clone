@@ -37,7 +37,7 @@ const Cart = () => {
 
   // Handeling totalPrice here
   for (let i = 0; i < totalData; i++) {
-    totalPrice = cartData[i].price * cartData[i].qut;
+    totalPrice = cartData[i]?.price * cartData[i]?.qut;
     total += totalPrice;
   }
 
@@ -49,11 +49,22 @@ const Cart = () => {
     return <Spinner />;
   } else if (isError) {
     return <h1>Something went wrong</h1>;
-  }else if(cartData.length===0){
-    return <Box>
-      <h1>Your Bag Is Empty</h1>
-      <Link to = "/Womens"><Button backgroundColor={"black"} color = "white" p = "20px 10px" mt = "20px">Go For Shopping</Button></Link>
-    </Box>
+  } else if (cartData?.length === 0) {
+    return (
+      <Box>
+        <h1>Your Bag Is Empty</h1>
+        <Link to="/Womens">
+          <Button
+            backgroundColor={"black"}
+            color="white"
+            p="20px 10px"
+            mt="20px"
+          >
+            Go For Shopping
+          </Button>
+        </Link>
+      </Box>
+    );
   }
   return (
     <Box>
@@ -61,9 +72,18 @@ const Cart = () => {
         <Text fontSize="30px" fontWeight={"bold"} textAlign={"left"}>
           My Bag ( {totalData} )
         </Text>
-        <Box display={"grid"} gridTemplateColumns={"60% 1fr"} gap="40px">
+        <Box
+          display={"grid"}
+          gridTemplateColumns={{
+            base: "none",
+            sm: "none",
+            md: "none",
+            lg: "60% 1fr",
+          }}
+          gap="40px"
+        >
           <Box id="cart">
-            {cartData.map((item) => {
+            {cartData?.map((item) => {
               return (
                 <SingleCart
                   {...item}

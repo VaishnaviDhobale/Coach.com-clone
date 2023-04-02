@@ -41,7 +41,7 @@ const ProductCard = ({ id, image, title, price }) => {
   const [scrollBehavior] = useState("inside");
 
   // Handling add wishlist
-  const handleAddWishlist = (id) => {
+  const handleAddWishlist = (id,) => {
     const data = {
       id,
       image,
