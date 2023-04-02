@@ -8,8 +8,8 @@ import TopNavbar from "./userSide/components/TopNav";
 function App() {
   return (
     <div className="App">
-      {/* <TopNavbar /> */}
-      {/* <UserNavbar /> */}
+      <TopNavbar />
+      <UserNavbar />
       <MainRoutes />
       <Footer />
     </div>

@@ -8,13 +8,7 @@
     padding-top:40px;
     padding-left:30px;
     padding-bottom:40px;
-
     margin-top:50px;
-    margin-top: 50px;
-
-    
-
-
 }
 .footer>div>h4{
     font-size:13px;
@@ -27,6 +21,9 @@
 }
 .footer>div>p:hover{
     color:blue;
+}
+.footer>div>img{
+    width:10%;
 }
 
 .bottom1>div{
@@ -65,9 +62,10 @@
 
 /* media screen footer */
 
-@media all and (min-width:150px) and (max-width:470px) {
+@media all and (min-width:451px) and (max-width:750px) {
     .footer{
        grid-template-columns: repeat(3,1fr);
+       padding-right:100px;
     }
     .footer>h1{
         text-align:center;
@@ -80,7 +78,7 @@
 
 }
 
-@media all and (min-width:300px) and (max-width:550px) {
+@media all and (min-width:150px) and (max-width:470px) {
     .footer>h1{
         text-align:center;
         font-size:small;
@@ -104,7 +102,7 @@
 
 
 
-     @media all and (min-width:180px) and (max-width:350px) {
+     @media all and (min-width:100px) and (max-width:450px) {
         .footer>h1{
             text-align:center;
             font-size:small;
@@ -112,13 +110,19 @@
         }
         .footer{
             grid-template-columns: repeat(1,1fr);
-            width:100%;
+            padding-right:100%;
             width:fit-content;
+            width:100%;
          }
          .footer>p{
             text-align:center;
         font-size:small;
         flex-direction:column;
+    }
+
+    .footer>div{
+        flex-direction:column;
+        width:100%;
     }
 }
 
@@ -127,15 +131,17 @@
 /* bottom parts */
 
 
-@media all and (min-width:150px) and (max-width:470px) {
+@media all and (min-width:451px) and (max-width:750px) {
     .bottom1{
        flex-direction:column;
+       width:100%;
     }
 }
 
 @media all and (min-width:150px) and (max-width:470px) {
     .bottom1{
         flex-direction:column;
+        width:100%;
      }
 
 
@@ -146,15 +152,17 @@
 
 
     
-@media all and (min-width:150px) and (max-width:470px) {
+@media all and (min-width:451px) and (max-width:750px) {
     .bottom2{
        flex-direction:column;
+       width:100%
     }
 }
 
 @media all and (min-width:150px) and (max-width:470px) {
     .bottom2{
         flex-direction:column;
+        width:100%
      }
 
 
@@ -162,15 +170,17 @@
 
     /* bottom-3 */
         
-@media all and (min-width:150px) and (max-width:470px) {
+@media all and (min-width:451px) and (max-width:750px) {
     .bottom3{
        flex-direction:column;
+       width:100%;
     }
 }
 
 @media all and (min-width:150px) and (max-width:470px) {
     .bottom3{
         flex-direction:column;
+        width:100%;
      }
 
 

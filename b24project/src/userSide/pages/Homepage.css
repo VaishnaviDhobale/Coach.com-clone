@@ -476,7 +476,7 @@ margin-left:10px;
 /* text-box */
 
 
-@media all and (min-width:200px) and (max-width:653px) {
+@media all and (min-width:451px) and (max-width:750px) {
     .textbox>h1{
         
         flex-direction:column;
@@ -508,7 +508,7 @@ margin-left:10px;
         flex-direction:column;
     }
 }
-@media all and (min-width:100px) and (max-width:450px) {
+@media all and (min-width:451px) and (max-width:750px) {
     #main-slider-container{
  flex-direction:column;
 
@@ -520,7 +520,7 @@ margin-left:10px;
 
 
 /* gray */
-@media all and (min-width:150px) and (max-width:470px) {
+@media all and (min-width:450px) and (max-width:750px) {
     .gray{
         width:100%;
         text-align:center;
@@ -531,7 +531,7 @@ margin-left:10px;
 }
 }
 
-@media all and (min-width:200px) and (max-width:450px) {
+@media all and (min-width:100px) and (max-width:450px) {
     
     .gray>h1{
         text-align:center;
@@ -544,16 +544,18 @@ margin-left:10px;
 
 
 
-@media all and (min-width:300px) and (max-width:570px) {
+@media all and (min-width:451px) and (max-width:750px) {
     .graygrid{
     
        grid-template-columns:repeat(2,1fr);
+       width:200px;
 
     }
     
     .graygrid>div>h1{
         text-align:center;
         font-size: small;
+        
     }
     .graygrid>div>p{
         text-align:center;
@@ -565,10 +567,11 @@ margin-left:10px;
     
 }
 
-@media all and (min-width:100px) and (max-width:250px) {
+@media all and (min-width:100px) and (max-width:450px) {
     .graygrid{
        grid-template-columns:repeat(1,1fr);
        height:fit-content;
+    
 
     }
     
@@ -577,6 +580,17 @@ margin-left:10px;
         text-align:center;
         font-size:small;
         width:30%;
+        margin-left:120px;
+    }
+    .graygrid>div>h1{
+        text-align:center;
+        font-size: small;
+        margin-left:60px;
+    }
+    .graygrid>div>img{
+        width:60%;
+        margin-left:40px;
+
     }
 }
 
