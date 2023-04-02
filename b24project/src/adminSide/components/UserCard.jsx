@@ -13,4 +13,4 @@ const UserCard = ({name,email,age,city,address,pincode}) => {
   )
 }
 
-export default UserCard
+export default UserCard;

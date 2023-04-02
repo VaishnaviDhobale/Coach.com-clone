@@ -1,7 +1,7 @@
 import React from 'react'
 
 const OrderCard = ({image,title,price,category,email,transaction_id}) => {
-    console.log(props)
+
   return (
     <div>
        <h1>Email:{email}</h1>
@@ -15,4 +15,4 @@ const OrderCard = ({image,title,price,category,email,transaction_id}) => {
   )
 }
 
-export default OrderCard
+export default OrderCard;
