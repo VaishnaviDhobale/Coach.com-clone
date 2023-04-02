@@ -2,7 +2,9 @@
 import { Link } from "react-router-dom";
 import "./Homepage.css";
 import { Button } from "@chakra-ui/react";
-import {MdKeyboardArrowLeft,MdKeyboardArrowRight} from "react-icons/md"
+import {MdKeyboardArrowLeft,MdKeyboardArrowRight} from "react-icons/md";
+
+
 
 const HomePage=(props)=>{
     // autoplay muted controls loop autoplay
@@ -53,29 +55,29 @@ const HomePage=(props)=>{
         {/* imageboxes */}
         <div className="grid">
             {/* <div><a href=""><img width="99%" src="https://i.postimg.cc/156p9zK7/Whats-App-Image-2023-03-29-at-16-04-46.jpg"/></a></div> */}
-            <div><a href=""><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/LNX_DESKTOP_LP_SLICE.mp4"/></a></div>
-            <div><a href=""><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/CAMI_DESKTOP_LP_SLICE.mp4"/></a></div>
+            <div><a href="/Womens"><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/LNX_DESKTOP_LP_SLICE.mp4"/></a></div>
+            <div><a href="/Womens"><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/CAMI_DESKTOP_LP_SLICE.mp4"/></a></div>
             {/* <div><a href=""></a><img width="93%"  src="https://i.postimg.cc/pTTfxY0K/Whats-App-Image-2023-03-29-at-16-17-14.jpg"/></div> */}
             {/* <div><a href=""></a><img width="95%" src="https://i.postimg.cc/9Fpy4nvy/Whats-App-Image-2023-03-29-at-16-17-14-1.jpg"/></div> */}
-            <div><a href=""></a><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/KOKI_DESKTOP_LP_SLICE.mp4"/></div>
-            <div><a href=""><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/JINYAN_DESKTOP_LP_SLICE.mp4"></video></a></div>
+            <div><a href="/Womens"></a><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/KOKI_DESKTOP_LP_SLICE.mp4"/></div>
+            <div><a href="/Womens"><video loop muted autoplay="autoplay" src="https://assets.coach.com/na/media/web-production/202303/JINYAN_DESKTOP_LP_SLICE.mp4"></video></a></div>
             {/* <div><a href=""></a><img width="95%" src="https://i.postimg.cc/RZ2hq1Vc/Whats-App-Image-2023-03-29-at-16-17-14-2.jpg"/></div> */}
         </div>
 
         {/* purple section */}
         <div className="camp">
-            <Button marginTop="10px"  ><a href="">CAMPAIGN</a></Button>
+            <Button marginTop="10px"  ><a href="/Womens">CAMPAIGN</a></Button>
             <h1>There is a Tabby for everyone</h1>
             <h1>(and every side of you)</h1>
-            <Button marginTop="25px"><a href="">SEE TABBY BAGS</a></Button>
+            <Button marginTop="25px"><a href="/Womens">SEE TABBY BAGS</a></Button>
         </div>
         {/* FIVE BAG SECTION */}
         <div className="bagz">
-            <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby1_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px" > SHOP TABBY WRISLET</Button></div>
-            <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby2_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY MESSENGER</Button></div>
-            <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby3_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP PILLOW BABY</Button></div>
-            <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby4_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY BOX BAG</Button></div>
-            <div><a href=""><img src="https://cms.coach.com/i/coach/0315-tabby5_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY 26</Button></div>
+            <div><a href="/Womens"><img src="https://cms.coach.com/i/coach/0315-tabby1_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px" > SHOP TABBY WRISLET</Button></div>
+            <div><a href="/Womens"><img src="https://cms.coach.com/i/coach/0315-tabby2_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY REAL</Button></div>
+            <div><a href="/Womens"><img src="https://cms.coach.com/i/coach/0315-tabby3_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP PILLOW BABY</Button></div>
+            <div><a href="/Womens"><img src="https://cms.coach.com/i/coach/0315-tabby4_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY BOX BAG</Button></div>
+            <div><a href="/Womens"><img src="https://cms.coach.com/i/coach/0315-tabby5_1?&w=384&sm=aspect&aspect=1:1&fmt=webp&$qlt_med$"/></a><Button marginTop="70px">SHOP TABBY 26</Button></div>
         </div>
         {/* pink section video with photo */}
         <div className="pinkz">
@@ -130,11 +132,11 @@ const HomePage=(props)=>{
             <div><img src="https://cms.coach.com/i/coach/icon-bopus.png"/><h1>More Ways to Shop</h1><p>When a friend makes their first purchase of $250. (Get $30 if you sign in or sign up to be an Insider!)</p></div>
             <div><img src="https://cms.coach.com/i/coach/icon-invite-friend.png"/><h1>Give $20, get $20.</h1><p>Instant rewards & more good things.</p></div>
             <div><img src="https://cms.coach.com/i/coach/coach-insider-hp-icon"/><h1>Coach Insider</h1><p>Complimentary gift wrap and more.</p></div>
-            <div><p></p></div>
+            {/* <div><p></p></div>
             <div><p></p></div>
             <div><img src="https://cms.coach.com/i/coach/icon-gift-services.png"/><h1>Gift Services</h1><p>Complimentary gift wrap and more.</p></div>
             <div><p></p></div>
-            <div><p></p></div>
+            <div><p></p></div> */}
         </div>
         
         
