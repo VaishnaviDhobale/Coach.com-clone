@@ -26,6 +26,9 @@ const ProductCard = ({ image, title, id, price, category }) => {
 //     isClosable: true,
 //   });
 //  }
+const handleDelete =()=>{
+  
+}
   return (
     <div>
       <Card maxW="sm">

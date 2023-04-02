@@ -12,7 +12,7 @@ const TopNavbar=()=>{
         <div className="topnav">
    
              
-        <Button><a href="">Recorded</a></Button>
+        <Button><a href="xyz">Recorded</a></Button>
          
             <img  src="https://i.postimg.cc/yYBp7z01/Whats-App-Image-2023-04-01-at-13-31-59.jpg"/>
     
@@ -23,8 +23,8 @@ const TopNavbar=()=>{
              */}
              <Link to="/">
              <RxHeart size="2rem"/></Link>
-             <Link to="/"><IoPersonOutline marginLeft="30px" size="2rem"/></Link>
-            <Link to="/"> <IoBagHandleOutline paddingLeft="200px"  size="2rem"/></Link>
+             <Link to="/"><IoPersonOutline  size="2rem"/></Link>
+            <Link to="/"> <IoBagHandleOutline   size="2rem"/></Link>
 
         </div>
     )

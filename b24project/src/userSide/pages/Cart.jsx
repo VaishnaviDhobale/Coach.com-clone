@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCartData, getCartData } from "../../redux/carts/actions";
 import SingleCart from "../components/SingleCart";
+
+
 import {
   Box,
   Spinner,
@@ -66,6 +68,7 @@ const Cart = () => {
             {cartData.map((item) => {
               return (
                 <SingleCart
+                  key={Math.random()}
                   {...item}
                   totalData={totalData}
                   handleDeleteCart={handleDeleteCart}
@@ -109,7 +112,12 @@ const Cart = () => {
                 w="100%"
                 p="25px 0px"
               >
+                <Link to={"/payment"}>
                 PROCEED TO CHECKOUT
+                </Link>
+                
+                 
+                
               </Button>
             </Link>
             <Text mt="20px">OR CHECKOUT WITH </Text>
