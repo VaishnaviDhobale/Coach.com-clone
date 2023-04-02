@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-multi-carousel": "^2.8.2",
+    "react-razorpay": "^1.2.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
@@ -26,6 +27,8 @@
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.9",
+    "vercel": "^28.18.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

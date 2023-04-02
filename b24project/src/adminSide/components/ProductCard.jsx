@@ -18,14 +18,17 @@ const ProductCard = ({ image, title, id, price, category }) => {
   // const dispatch = useDispatch();
   // const toast = useToast();
   // const positions = ["bottom-right"];
-  //  const handleDelete =(id)=>{
-  //   dispatch(deleteProducts(id))
-  //   toast({
-  //     title: `Product Delete Successfully`,
-  //     position: positions,
-  //     isClosable: true,
-  //   });
-  //  }
+
+//  const handleDelete =(id)=>{
+//   dispatch(deleteProducts(id))
+//   toast({
+//     title: `Product Delete Successfully`,
+//     position: positions,
+//     isClosable: true,
+//   });
+//  }
+
+
   return (
     <div>
       <Card maxW="sm">

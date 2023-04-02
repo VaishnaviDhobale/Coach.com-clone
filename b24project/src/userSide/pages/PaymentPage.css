@@ -1,0 +1,43 @@
+.paymentpage {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(208, 24, 24);
+  width: 90%;
+  height: 900px;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+.enter-address {
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.enter-address input {
+  border: 1px solid blue;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 80%;
+  height: 60px;
+  border-radius: 3px;
+}
+
+.enter-address button {
+  border: 1px solid blueviolet;
+  background-color: blueviolet;
+  color: white;
+  width: 80%;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.enter-address h2 {
+  font-weight: bold;
+}
+
+.payment-box {
+  border: 1px solid brown;
+}

@@ -12,9 +12,13 @@ import {MdSearch} from "react-icons/md"
 const TopNavbar=()=>{
     return (
         <div className="topnav">
-   
+
+             
+        <Button><a href="xyz">Recorded</a></Button>
+
              <div>
         
+
          
             <img  src="https://i.postimg.cc/SsRfrTjB/IMG-20230402-WA0000.jpg"/>
             </div>
@@ -28,9 +32,13 @@ const TopNavbar=()=>{
                 <input type="text" placeholder="Search" className="searchbox"/><Button>Search</Button>
              <Link to="/">
              <RxHeart size="2rem"/></Link>
+
+             <Link to="/"><IoPersonOutline  size="2rem"/></Link>
+            <Link to="/"> <IoBagHandleOutline   size="2rem"/></Link>
+
              <Link to="/"><IoPersonOutline marginLeft="30px" size="2rem"/></Link>
             <Link to="/"> <IoBagHandleOutline paddingLeft="200px"  size="2rem"/></Link>
-            </div>
+
 
         </div>
     )

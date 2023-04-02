@@ -16,7 +16,7 @@ import Womens from "./userSide/pages/Womens";
 import Orders from "./adminSide/pages/Orders"; 
 import ProductDetails from "./userSide/components/ProductDetails";
 import Login from "./userSide/pages/Login";
-
+import PaymentPage from "./userSide/pages/PaymentPage";
 import EditProduct from "./adminSide/pages/EditProduct";
 
 
@@ -51,6 +51,7 @@ function MainRoutes(){
        <Route path="/ProductDetails/:id" element={<ProductDetails/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path = "/cart" element = {<Cart />}></Route>
+        <Route path="/payment" element={<PaymentPage/>}/>
       </Routes>)
 
     }
