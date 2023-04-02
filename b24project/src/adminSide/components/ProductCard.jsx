@@ -12,20 +12,20 @@ import {
 } from "@chakra-ui/react";
 import ProductSidebar from "./ProductSidebar";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { deleteProducts} from "../../redux/products/action";
+// import { useDispatch } from "react-redux";
+// import { deleteProducts} from "../../redux/products/action";
 const ProductCard = ({ image, title, id, price, category }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const toast = useToast();
   // const positions = ["bottom-right"];
-//  const handleDelete =(id)=>{
-//   dispatch(deleteProducts(id))
-//   toast({
-//     title: `Product Delete Successfully`,
-//     position: positions,
-//     isClosable: true,
-//   });
-//  }
+  //  const handleDelete =(id)=>{
+  //   dispatch(deleteProducts(id))
+  //   toast({
+  //     title: `Product Delete Successfully`,
+  //     position: positions,
+  //     isClosable: true,
+  //   });
+  //  }
   return (
     <div>
       <Card maxW="sm">
@@ -49,7 +49,7 @@ const ProductCard = ({ image, title, id, price, category }) => {
             <Link to={`/edit/${id}`}>Edit</Link>
           </Button>
           <ProductSidebar />
-          <Button onClick={handleDelete(id)}>Delete</Button>
+          <Button>Delete</Button>
         </CardFooter>
       </Card>
     </div>
