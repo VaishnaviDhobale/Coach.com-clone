@@ -38,7 +38,7 @@ const TopNavbar=()=>{
 
              <Link to="/"><IoPersonOutline marginLeft="30px" size="2rem"/></Link>
             <Link to="/"> <IoBagHandleOutline paddingLeft="200px"  size="2rem"/></Link>
-
+            </div>
 
         </div>
     )
