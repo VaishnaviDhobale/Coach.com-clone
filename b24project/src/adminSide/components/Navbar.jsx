@@ -31,11 +31,11 @@ const Navbar = () => {
               <Link to="/users" className="nav-link active" aria-current="page" >
                 Users
               </Link>
-              <Link to="/" className="nav-link active" aria-current="page" >
-                Bagiose
-              </Link>
               <Link to="/orders" className="nav-link active" aria-current="page" >
                 Orders
+              </Link>
+              <Link to="/" className="nav-link active" aria-current="page" >
+                Home Page
               </Link>
               
             </div>
