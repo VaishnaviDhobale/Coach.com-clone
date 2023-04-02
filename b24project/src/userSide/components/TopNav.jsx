@@ -16,9 +16,7 @@ const TopNavbar=()=>{
              
         <Button><a href="xyz">Recorded</a></Button>
 
-             <div>
-        
-
+            <div>
          
             <img  src="https://i.postimg.cc/SsRfrTjB/IMG-20230402-WA0000.jpg"/>
             </div>
@@ -40,6 +38,8 @@ const TopNavbar=()=>{
             <Link to="/"> <IoBagHandleOutline paddingLeft="200px"  size="2rem"/></Link>
             </div>
 
+
+        </div>
         </div>
     )
 }
