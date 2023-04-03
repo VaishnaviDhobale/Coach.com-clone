@@ -8,7 +8,7 @@ import UserNavbar from "../components/UserNavbar";
 
 
 
-
+// home page
 const HomePage=(props)=>{
     // autoplay muted controls loop autoplay
 // props are given for imageSlider
@@ -43,7 +43,7 @@ const HomePage=(props)=>{
     return (
         <>
         {/* top section */}
-        <TopNavbar/>
+        <TopNavbar/>  
         <UserNavbar/>
         <div className="purple">
            <h1>What we carry makes us stronger</h1> 
