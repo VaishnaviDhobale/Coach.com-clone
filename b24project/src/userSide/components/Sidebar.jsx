@@ -118,6 +118,7 @@ const Sidebar = ({ getMethod }) => {
 
       {/* This is sidebar  */}
       <Box
+      marginTop="100px"
         paddingLeft="30px"
         paddingRight="5px"
         display={{
