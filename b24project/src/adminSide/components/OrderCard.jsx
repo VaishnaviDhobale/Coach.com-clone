@@ -1,10 +1,18 @@
 import React from 'react'
 
-const OrderCard = (props) => {
-    console.log(props)
+const OrderCard = ({image,title,price,category,email,transaction_id}) => {
+
   return (
-    <div>OrderCard</div>
+    <div>
+       <h1>Email:{email}</h1>
+      <h2>Transaction Id:{transaction_id}</h2>
+      <h2>Title:{title}</h2>
+      <h2>Category:{category}</h2>
+      <h2>Price:{price}</h2>
+
+      <img src={image} alt={title} />
+    </div>
   )
 }
 
-export default OrderCard
+export default OrderCard;

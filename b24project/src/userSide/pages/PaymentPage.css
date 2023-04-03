@@ -10,6 +10,7 @@
 }
 .enter-address {
   border: 1px solid green;
+  margin-top: 150px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -40,4 +41,22 @@
 
 .payment-box {
   border: 1px solid brown;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.paymentpage-cartmap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+.payhere {
+  border: 1px solid blueviolet;
+  margin-top: 10px;
+  color: white;
+  height: 30px;
+  width: 70%;
+  background-color: blueviolet;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./PaymentPage.css"
 import { useSelector, useDispatch } from 'react-redux'
-
+import PaymentCard from '../components/PaymentCard'
 
 let initialState={
   
@@ -19,9 +19,15 @@ const PaymentPage = () => {
   const dispatch= useDispatch()
   const orderstore= useSelector((store)=>store.ordersReducer);
   const {cartData}= useSelector((store)=>store.cartReducer)
-  console.log(cartData)
   
-  const handleChange=(e)=>{
+  console.log(cartData)
+   let sum=0;
+  for(let i=0;i<cartData.length; i++){
+    sum+= +cartData[i].price
+  }
+  console.log(sum);
+    
+    const handleChange=(e)=>{
     console.log(e.target.value);
     const {name,value}= e.target 
         
@@ -41,7 +47,11 @@ const PaymentPage = () => {
       // setProducts(initialState); 
   
   }
-  
+  const handlePay=()=>{
+    setTimeout(() => {
+      alert('Your payment is successful');
+    }, 1500);
+  }
   
   return (
     <div className='paymentpage'>
@@ -59,13 +69,15 @@ const PaymentPage = () => {
       </div>
 
       <div className='payment-box'>
-
+            
           <div className='paymentpage-cartmap'>
               {cartData.map((item)=>{
-                return item.price 
+                return <PaymentCard key={item.id} {...item}/>
               })}
           </div>
-
+          <div  className='payhere'>
+               <button onClick={handlePay}>Pay Rs{sum}/- </button>
+          </div>
       </div>
      </div>
   )
