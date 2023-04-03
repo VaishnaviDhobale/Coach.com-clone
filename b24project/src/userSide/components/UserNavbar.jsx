@@ -15,7 +15,7 @@ const links=[
     {path:"/BagioseInsider",title:"BAGIOSE INSIDER"},
     {path:"/Gifts",title:"GIFTS"},
     {path:"/SALE",title:"SALE"},
-    {path:"/cart",title:"CART"},
+    // {path:"/cart",title:"CART"},
 
     // {path:"/login", title:"LOGIN"}
 ];
