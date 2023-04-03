@@ -1,6 +1,13 @@
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
+
 function BagioseInsider(){
     return (
-        <h1>Bagiose INSIDER</h1>
+        <>
+         <TopNavbar />
+      <UserNavbar />
+      <h1>Bagiose INSIDER</h1>
+        </>
     )
 }
 export default BagioseInsider;

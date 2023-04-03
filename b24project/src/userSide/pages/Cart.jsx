@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCartData, getCartData } from "../../redux/carts/actions";
 import SingleCart from "../components/SingleCart";
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
 
 
 import {
@@ -59,6 +61,8 @@ const Cart = () => {
   }
   return (
     <Box>
+       <TopNavbar />
+      <UserNavbar />
       <Box  ml="20px">
         <Text fontSize="30px" fontWeight={"bold"} textAlign={"left"}>
           My Bag ( {totalData} )

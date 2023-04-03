@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Homepage.css";
 import { Button } from "@chakra-ui/react";
 import {MdKeyboardArrowLeft,MdKeyboardArrowRight} from "react-icons/md";
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
 
 
 
@@ -40,6 +42,8 @@ const HomePage=(props)=>{
     return (
         <>
         {/* top section */}
+        <TopNavbar />
+       <UserNavbar />
         <div className="purple">
            <h1>What we carry makes us stronger</h1> 
            <p>And the Tabby bag holds it-out dreams, experiences and the many sides of ourselves.</p>
