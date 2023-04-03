@@ -14,7 +14,7 @@ const TopNavbar=()=>{
         <div className="topnav">
 
              
-        <Button><a href="xyz">Recorded</a></Button>
+        
 
             <div>
          
@@ -31,9 +31,11 @@ const TopNavbar=()=>{
              <Link to="/">
              <RxHeart size="2rem"/></Link>
 
-             <Link to="/"><IoPersonOutline  size="2rem"/></Link>
-            <Link to="/"> <IoBagHandleOutline   size="2rem"/></Link>
+             <Link to="/login"><IoPersonOutline  size="2rem"/></Link>
+            <Link to="/cart"> <IoBagHandleOutline   size="2rem"/></Link>
 
+
+<<<<<<< HEAD
 
              <Link to="/"><IoPersonOutline marginLeft="30px" size="2rem"/></Link>
             <Link to="/"> <IoBagHandleOutline paddingLeft="200px"  size="2rem"/></Link>
@@ -44,6 +46,14 @@ const TopNavbar=()=>{
 
 
         </div>
+=======
+            </div>
+
+
+
+        </div>
+        
+>>>>>>> 790606a4799fb46146b057d63ca7896afe18f157
     )
 }
 export default TopNavbar;

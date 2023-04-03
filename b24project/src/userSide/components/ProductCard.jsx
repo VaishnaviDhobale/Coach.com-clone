@@ -68,6 +68,7 @@ const ProductCard = ({ id, image, title, price }) => {
         onMouseLeave={() => handleDeleteHover()}
         position="relative"
         cursor="pointer"
+        mt="180px"
         // h = "450px"
         // border = "1px solid red"
       >
@@ -86,6 +87,7 @@ const ProductCard = ({ id, image, title, price }) => {
           position={"absolute"}
           top="5px"
           right={"5px"}
+          mt="100px"
           onMouseEnter={() => setShowQu(false)}
           onMouseLeave={() => setShowQu(true)}
           onClick={() => handleAddWishlist(id, image, title, price)}
@@ -104,6 +106,7 @@ const ProductCard = ({ id, image, title, price }) => {
             p="8px 0px"
             backgroundColor="#f7f7f7"
             onClick={onOpen}
+            mt="200px"
           >
             Quick View
           </Text>

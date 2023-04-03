@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import "./PaymentPage.css"
 import { useSelector, useDispatch } from 'react-redux'
+<<<<<<< HEAD
 import PaymentCard from '../components/PaymentCard'
+=======
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
+
+>>>>>>> 790606a4799fb46146b057d63ca7896afe18f157
 
 let initialState={
   
@@ -55,6 +61,9 @@ const PaymentPage = () => {
   
   return (
     <div className='paymentpage'>
+         <TopNavbar />
+         <UserNavbar />
+      
     
       <div className='enter-address'>
          <h2>Enter Delivery Address</h2>

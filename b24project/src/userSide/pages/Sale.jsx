@@ -1,6 +1,13 @@
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
+
 function Sale(){
     return (
-        <h1>Sale</h1>
+        <>
+         <TopNavbar />
+      <UserNavbar />
+      <h1>Sale</h1>
+        </>
     )
 }
 export default Sale;

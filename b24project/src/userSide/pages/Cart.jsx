@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCartData, getCartData } from "../../redux/carts/actions";
 import SingleCart from "../components/SingleCart";
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
 
 
 import {
@@ -59,11 +61,13 @@ const Cart = () => {
   }
   return (
     <Box>
-      <Box ml="20px">
+       <TopNavbar />
+      <UserNavbar />
+      <Box  ml="20px">
         <Text fontSize="30px" fontWeight={"bold"} textAlign={"left"}>
           My Bag ( {totalData} )
         </Text>
-        <Box display={"grid"} gridTemplateColumns={"60% 1fr"} gap="40px">
+        <Box mt="100px" display={"grid"} gridTemplateColumns={"60% 1fr"} gap="40px">
           <Box id="cart">
             {cartData.map((item) => {
               return (
@@ -78,7 +82,7 @@ const Cart = () => {
             })}
           </Box>
 
-          <Box id="pay" boxShadow=" rgba(0, 0, 0, 0.24) 0px 3px 8px" p="20px">
+          <Box id="pay" boxShadow=" rgba(0, 0, 0, 0.24) 0px 3px 8px" p="20px" mt="80px">
             <Text fontWeight={"bold"} fontSize={"25px"}>
               Order Summary
             </Text>
