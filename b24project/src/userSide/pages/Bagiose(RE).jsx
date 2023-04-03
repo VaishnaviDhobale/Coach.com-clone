@@ -1,6 +1,13 @@
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
+
 function BagioseRE(){
     return (
-        <h1>Bagiose(RELOVED)</h1>
+        <>
+        <TopNavbar />
+      <UserNavbar />
+      <h1>Bagiose(RELOVED)</h1>
+        </>
     )
 }
 export default BagioseRE;

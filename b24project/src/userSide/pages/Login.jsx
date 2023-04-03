@@ -1,8 +1,14 @@
 import React from 'react'
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <>
+     <TopNavbar />
+      <UserNavbar />
+      <div>Login</div>
+    </>
   )
 }
 

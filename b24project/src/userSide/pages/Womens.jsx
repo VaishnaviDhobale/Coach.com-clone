@@ -4,6 +4,8 @@ import { getSidebarData, getWomensData} from "../../redux/womens/actions";
 import ProductsData from "../components/ProductsData";
 import { useContext, useEffect } from "react";
 import { Context } from "../../ContextApi/CommanContext";
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
 
 
 const Womens = () => {
@@ -16,6 +18,8 @@ const Womens = () => {
 
     return (
     <Box>
+       <TopNavbar />
+      <UserNavbar />
       <Sidebar getMethod={getSidebarData}/>
       <ProductsData  getMethod={getWomensData} />
     </Box>

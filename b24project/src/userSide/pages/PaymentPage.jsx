@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import "./PaymentPage.css"
 import { useSelector, useDispatch } from 'react-redux'
+import TopNavbar from "../components/TopNav";
+import UserNavbar from "../components/UserNavbar";
 
 
 let initialState={
@@ -45,6 +47,9 @@ const PaymentPage = () => {
   
   return (
     <div className='paymentpage'>
+         <TopNavbar />
+         <UserNavbar />
+      
     
       <div className='enter-address'>
          <h2>Enter Delivery Address</h2>
