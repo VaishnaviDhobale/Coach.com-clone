@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteCartData, getCartData } from "../../redux/carts/actions";
 import SingleCart from "../components/SingleCart";
 import TopNavbar from "../components/TopNav";
-import UserNavbar from "../components/UserNavbar";
+import Navbar from "../components/UserNavbar";
 
 
 import {
@@ -46,7 +46,7 @@ const Cart = () => {
   }
 
   useEffect(() => {
-    dispatch(getCartData(paramObj));
+    dispatch(getCartData);
   }, []);
 
   if (isLoading) {
@@ -61,8 +61,8 @@ const Cart = () => {
   }
   return (
     <Box>
-       <TopNavbar />
-      <UserNavbar />
+      <TopNavbar />
+      <Navbar />
       <Box  ml="20px">
         <Text fontSize="30px" fontWeight={"bold"} textAlign={"left"}>
           My Bag ( {totalData} )

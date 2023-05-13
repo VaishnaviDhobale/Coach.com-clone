@@ -56,7 +56,7 @@ function Navbar(){
             </NavLink>
         ))}
        
-        { isAuthenticated ? ( <button style={{border:"1px solid #b266ff", color:"white", backgroundColor:"#b266ff"}} onClick={() => logout({ returnTo: window.location.origin })}>
+        { isAuthenticated ? ( <button style={{border:"1px solid #b266ff", color:"white", backgroundColor:"#b266ff", padding : "20px"}} onClick={() => logout({ returnTo: window.location.origin })}>
          LOGOUT 
        </button>) :  
         

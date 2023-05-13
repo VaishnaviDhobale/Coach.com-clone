@@ -20,6 +20,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { postWishlistData } from "../../redux/wishlist/actions";
 import { Context } from "../../ContextApi/CommanContext";
+import TopNavbar from "./TopNav";
 
 const ProductCard = ({ id, image, title, price }) => {
   let { urlKey } = useContext(Context);

@@ -1,40 +1,46 @@
 .topnav{
-    border:0px solid black;
+    /* border:0px solid black; */
     height:70px;
     width:100%;
     margin:auto;
     background-color:white;
     position:fixed;
-    display:flex;
-    justify-content:space-between;
-    grid-template-columns:repeat(8,1fr);
+    display:grid;
+    grid-template-columns: 40% 60%;
+    justify-items: end;
+    /* justify-content:space-between; */
+    /* grid-template-columns:repeat(8,1fr); */
     z-index:1;
+    /* border: 1px solid red; */
 }
 .topnav>div{
+    width: 65%;
     display:flex;
+    justify-content: space-between;
     border:0px solid black;
     margin-right:30px;
     padding-top:10px;
-    
+    align-items: center;
+    /* border: 1px solid black; */
 }
 .topnav>div>button{
     background-color:#B266FF;
-    margin-top:3px;
-    margin-right:2px;
-    margin-bottom:6px;
-    border:1px solid black;
+    padding : 7px;
 }
 .topnav>div>button:hover{
     background-color:black;
     color:white;
 }
 .topnav>div>input{
+    border: 1px solid black;
     height:40px;
-    margin-top:3.5px;
+    outline: none;
+    padding-left: 10px;
+    width: 65%;
     
 }
 .topnav>div>img{
-    width:70%;
+    width:40%;
     padding-left:13px;
 }
 

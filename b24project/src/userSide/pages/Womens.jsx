@@ -20,8 +20,10 @@ const Womens = () => {
     <Box>
        <TopNavbar />
       <UserNavbar />
+      <Box display="grid" gridTemplateColumns={"0% 1fr"}>
       <Sidebar getMethod={getSidebarData}/>
       <ProductsData  getMethod={getWomensData} />
+      </Box>
     </Box>
   );
 };

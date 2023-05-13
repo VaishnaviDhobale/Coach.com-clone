@@ -6,6 +6,8 @@ import { Context } from "../../ContextApi/CommanContext";
 import { BsStarFill } from "react-icons/bs";
 import { postCartData } from "../../redux/carts/actions";
 import { useDispatch } from "react-redux";
+import Navbar from "../components/UserNavbar"
+import TopNavbar from "./TopNav";
 
 const ProductsDetails = () => {
   let toast = useToast();
@@ -47,6 +49,8 @@ const ProductsDetails = () => {
 
   return (
     <Box>
+      <TopNavbar />
+      <Navbar />
       <Box
         display={"grid"}
         gridTemplateColumns={{
@@ -61,6 +65,8 @@ const ProductsDetails = () => {
           sm: "0px 20px",
           md: "0px 0px",
         }}
+        pt = "150px"
+        // border = "3px solid red"
       >
         <Box width="100%" backgroundColor="#f1f1f1" m="auto" mt="0px">
           <Img m="auto" width="50%" src={data.image}></Img>
@@ -122,6 +128,7 @@ const ProductsDetails = () => {
                 <option value="">5</option>
               </Select>
             </Box>
+            <Link to = "/payment">
             <Button
               backgroundColor={"black"}
               color="white"
@@ -131,6 +138,7 @@ const ProductsDetails = () => {
             >
               I WANT IT
             </Button>
+            </Link>
             <Button
               backgroundColor={"black"}
               color="white"

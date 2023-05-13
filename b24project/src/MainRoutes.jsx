@@ -18,6 +18,7 @@ import ProductDetails from "./userSide/components/ProductDetails";
 import Login from "./userSide/pages/Login";
 import PaymentPage from "./userSide/pages/PaymentPage";
 import EditProduct from "./adminSide/pages/EditProduct";
+import PrivateRouts from "./userSide/components/PrivateRoute";
 
 
 import Users from "./adminSide/pages/Users";
@@ -51,6 +52,7 @@ function MainRoutes(){
        <Route path="/ProductDetails/:id" element={<ProductDetails/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path = "/cart" element = {<Cart />}></Route>
+        {/* <Route path="/payment" element={<PrivateRouts><PaymentPage/></PrivateRouts>}/> */}
         <Route path="/payment" element={<PaymentPage/>}/>
       </Routes>)
 

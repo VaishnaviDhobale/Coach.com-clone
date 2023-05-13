@@ -39,11 +39,11 @@ const patchRequestSuccess = () => {
 
 
 // Fetching data for cart page 
-export const getCartData =(paramsObj)=> async(dispatch) => {
+export const getCartData = async(dispatch) => {
 
   try {
     dispatch(requestPending());
-    const apiData = await axios.get(`${cartUrl}/?_limit=16`,paramsObj);
+    const apiData = await axios.get(`${cartUrl}/?_limit=16`);
     dispatch(getRequestSuccess({data : apiData.data,totalData :apiData["headers"]["x-total-count"]}));
   } catch {
     dispatch(requestFailure());

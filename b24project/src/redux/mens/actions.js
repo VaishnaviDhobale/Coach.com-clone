@@ -44,11 +44,11 @@ import {
   
   // Fetching data for womens data 
   export const getMensData =(paramsObj)=> async(dispatch) => {
-  
+    console.log(paramsObj)
     try {
       dispatch(requestPending());
       const apiData = await axios.get(`${mensUrl}/?_limit=12}`,paramsObj);
-      console.log(apiData)
+      // console.log(apiData)
       dispatch(getRequestSuccess({data : apiData.data,totalData :apiData["headers"]["x-total-count"]}));
     } catch {
       dispatch(requestFailure());

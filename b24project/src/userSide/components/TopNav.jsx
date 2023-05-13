@@ -3,7 +3,7 @@ import { MdPlace } from "react-icons/md";
 import { Text } from "@chakra-ui/react";
 import { RxHeart } from "react-icons/rx";
 import { IoPersonOutline, IoBagHandleOutline } from "react-icons/io5";
-import { Box,Button } from "@chakra-ui/react";
+import { Img,Box,Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { MdSearch } from "react-icons/md";
 
@@ -11,7 +11,7 @@ const TopNavbar = () => {
   return (
     <Box className="topnav">
       <Box>
-        <img src="https://i.postimg.cc/SsRfrTjB/IMG-20230402-WA0000.jpg" />
+        <Img position={"relative"} right={"170px"} src="https://i.postimg.cc/SsRfrTjB/IMG-20230402-WA0000.jpg" />
       </Box>
 
       {/* <Text paddingTop="3"><RxHeart size={30} className="wshlst"/></Text>
@@ -21,17 +21,17 @@ const TopNavbar = () => {
              */}
       <Box>
         <input type="text" placeholder="Search" className="searchbox" />
-        <Button>Search</Button>
+        <button>Search</button>
         <Link to="/">
-          <RxHeart size="2rem" />
+          <RxHeart size="1.5rem" />
         </Link>
 
         <Link to="/login">
-          <IoPersonOutline size="2rem" />
+          <IoPersonOutline size="1.5rem" />
         </Link>
         <Link to="/cart">
           {" "}
-          <IoBagHandleOutline size="2rem" />
+          <IoBagHandleOutline size="1.5rem" />
         </Link>
       </Box>
     </Box>

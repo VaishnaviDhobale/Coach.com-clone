@@ -41,16 +41,18 @@ const Sidebar = ({ getMethod }) => {
   // Preparing params object here to pass correact params
   let paramsObj = {
     category: filterData,
+    _sort :"price",
+    _order : order,
   };
 
   useEffect(() => {
     dispatch(getMethod);
-    if (order !== "") {
-      paramsObj["_sort"] = "price";
-      paramsObj["_order"] = order;
-    }
+    // if (order !== "") {
+    // }
     setSearchParams(paramsObj);
   }, [filterData, order]);
+
+  // console.log(paramsObj)
 
   //Selecting unique data
   const categoryArr = [...new Set(sidebarData.map((item) => item.category))];
@@ -127,14 +129,15 @@ const Sidebar = ({ getMethod }) => {
           md: "none",
           lg: "block",
         }}
-        position={{
-          base: "",
-          sm: "",
-          md: "",
-          lg: "fixed",
-        }}
-        top="80px"
-        left="0px"
+        width={"250px"}
+        // position={{
+        //   base: "",
+        //   sm: "",
+        //   md: "",
+        //   lg: "fixed",
+        // }}
+        // top="80px"
+        // left="0px"
         borderRight="1px solid gray"
         pr="30px"
         h={"600px"}
