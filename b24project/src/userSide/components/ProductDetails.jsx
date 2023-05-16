@@ -12,28 +12,33 @@ import TopNavbar from "./TopNav";
 const ProductsDetails = () => {
   let toast = useToast();
   // Getting product id from url
-  const id = +useParams("id").id;
-
+  const id = useParams("id").id;
+  // console.log(id)
   // Accessing urlKey (This Context for getting correct data from server like "womens", "mens")
   const { urlKey } = useContext(Context);
   const [data, setData] = useState({});
 
+  // console.log(urlKey)
   // getting data from server
   const getData = async () => {
     let data = await axios.get(
-      `https://project-backend-t6y7.onrender.com/${urlKey}/${id}`
+      `https://ruby-defiant-caridea.cyclic.app/${urlKey}/${id}`
     );
     setData(data.data);
+    // console.log("data",data.data.data)
   };
 
+  console.log(data)
   // Getting cart detail from store
   const dispatch = useDispatch();
   // const datas = useSelector((store)=>store.cartReducer);
   // console.log(datas)
 
   // Handling cart post here
+  // console.log(data)
   const handleCartPosting = () => {
     let test = {...data,qut:1}
+    // console.log(data)
     dispatch(postCartData(test)).then(() => {
       toast({
         description: "Product Added Successfully",

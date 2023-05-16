@@ -11,7 +11,7 @@ import axios from "axios";
 
 
 
-const cartUrl = `https://project-backend-t6y7.onrender.com/cart`;
+const cartUrl = `https://ruby-defiant-caridea.cyclic.app/cart`;
 
 const requestPending = () => {
   return { type: REQUEST_PENDING };
@@ -43,8 +43,10 @@ export const getCartData = async(dispatch) => {
 
   try {
     dispatch(requestPending());
-    const apiData = await axios.get(`${cartUrl}/?_limit=16`);
-    dispatch(getRequestSuccess({data : apiData.data,totalData :apiData["headers"]["x-total-count"]}));
+    const apiData = await axios.get(`${cartUrl}`);
+    // console.log(apiData.data.totalData,"fgohgchjhgcgh")
+    dispatch(getRequestSuccess({data : apiData.data.data,totalData :apiData.data.totalData
+    }));
   } catch {
     dispatch(requestFailure());
   }
@@ -54,10 +56,10 @@ export const getCartData = async(dispatch) => {
 
 // Posting data for cart page 
 export const postCartData =(paramsObj)=> async(dispatch) => {
-
+  console.log(paramsObj,".........")
   try {
     dispatch(requestPending());
-    const apiData = await axios.post(`${cartUrl}/?_limit=16`,paramsObj);
+    const apiData = await axios.post(`${cartUrl}/addCart`,paramsObj);
     dispatch(postRequestSuccess(apiData.data));
   } catch {
     dispatch(requestFailure());
@@ -67,10 +69,10 @@ export const postCartData =(paramsObj)=> async(dispatch) => {
 
 // Deleting data for cart page 
 export const deleteCartData =(id)=> async(dispatch) => {
-
+  console.log(id)
   try {
     dispatch(requestPending());
-    await axios.delete(`${cartUrl}/${id}`);
+    await axios.delete(`${cartUrl}/delete/${id}`);
     dispatch(deleteRequestSuccess());
   } catch {
     dispatch(requestFailure());
@@ -81,10 +83,11 @@ export const deleteCartData =(id)=> async(dispatch) => {
 
 // Patch data for cart page 
 export const patchCartData =(id, paramObj)=> async(dispatch) => {
-
+  // console.log(id,paramObj)
   try {
     dispatch(requestPending());
-    await axios.patch(`${cartUrl}/${id}`,paramObj);
+    let data = await axios.patch(`${cartUrl}/update/${id}`,paramObj);
+    console.log(data)
     dispatch(patchRequestSuccess());
   } catch {
     dispatch(requestFailure());

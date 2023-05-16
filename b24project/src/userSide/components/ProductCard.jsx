@@ -22,9 +22,10 @@ import { postWishlistData } from "../../redux/wishlist/actions";
 import { Context } from "../../ContextApi/CommanContext";
 import TopNavbar from "./TopNav";
 
-const ProductCard = ({ id, image, title, price }) => {
-  let { urlKey } = useContext(Context);
+const ProductCard = ({ _id,id, image, title, price }) => {
+  // let { urlKey } = useContext(Context);
   const toast = useToast();
+  // console.log(_id);
   const dispatch = useDispatch();
   // this "shoeQu" for the "quick view hover"
   const [showQu, setShowQu] = useState(false);
@@ -63,7 +64,7 @@ const ProductCard = ({ id, image, title, price }) => {
       <Box
         key={id}
         textAlign={"left"}
-        w="90%"
+        w="100%"
         mb="20px"
         onMouseEnter={() => handleHover()}
         onMouseLeave={() => handleDeleteHover()}
@@ -113,13 +114,14 @@ const ProductCard = ({ id, image, title, price }) => {
           </Text>
         )}
         <Text fontWeight={"600"} mt="20px">
-          {title.substring(0, 23)}...
+          {title}
+          {/* {title.substring(0, 23)}... */}
         </Text>
         <Box>
           <Text fontWeight={"600"} mt="-10px">
             Rs {price}
           </Text>
-          <Link to={`/ProductDetails/${id}`} position="absolute" top="0px">
+          <Link to={`/ProductDetails/${_id}`} position="absolute" top="0px">
             <Button
               onMouseEnter={() => setShowQu(false)}
               onMouseLeave={() => setShowQu(true)}
@@ -199,15 +201,17 @@ const ProductCard = ({ id, image, title, price }) => {
                     <option value="">4</option>
                     <option value="">5</option>
                   </Select>
-                  <Button
-                    backgroundColor={"black"}
-                    color="white"
-                    m="20px 0px"
-                    w="100%"
-                    h="55px"
-                  >
-                    I WANT IT
-                  </Button>
+                  <Link to = "/payment">
+                    <Button
+                      backgroundColor={"black"}
+                      color="white"
+                      m="20px 0px"
+                      w="100%"
+                      h="55px"
+                    >
+                      I WANT IT
+                    </Button>
+                  </Link>
                 </Box>
 
                 <Box display={"flex"} justifyContent="space-between">

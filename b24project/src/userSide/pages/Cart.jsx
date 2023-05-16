@@ -32,10 +32,12 @@ const Cart = () => {
     },
   };
 
+  console.log(cartData)
   // handling delete cart
   const handleDeleteCart = (id) => {
+    console.log(id)
     dispatch(deleteCartData(id)).then(() => {
-      dispatch(getCartData(paramObj));
+      dispatch(getCartData());
     });
   };
 
@@ -70,6 +72,7 @@ const Cart = () => {
         <Box mt="100px" display={"grid"} gridTemplateColumns={"60% 1fr"} gap="40px">
           <Box id="cart">
             {cartData.map((item) => {
+              // console.log(item.price)
               return (
                 <SingleCart
                   key={Math.random()}

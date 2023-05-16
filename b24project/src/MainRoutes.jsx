@@ -24,6 +24,8 @@ import PrivateRouts from "./userSide/components/PrivateRoute";
 import Users from "./adminSide/pages/Users";
 
 import Cart from "./userSide/pages/Cart"
+import Signup from "./userSide/pages/Signup";
+import Logout from "./userSide/pages/Logout";
 
 
 
@@ -51,16 +53,14 @@ function MainRoutes(){
       <Route path="/users" element={<Users/>} />
        <Route path="/ProductDetails/:id" element={<ProductDetails/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/logout" element={<Logout/>}/>
         <Route path = "/cart" element = {<Cart />}></Route>
-        {/* <Route path="/payment" element={<PrivateRouts><PaymentPage/></PrivateRouts>}/> */}
-        <Route path="/payment" element={<PaymentPage/>}/>
+        <Route path = "/signup" element = {<Signup />}></Route>
+
+        <Route path="/payment" element={<PrivateRouts><PaymentPage/></PrivateRouts>}/>
+        {/* <Route path="/payment" element={<PaymentPage/>}/> */}
       </Routes>)
 
     }
-
-
-
-
-
 
 export default MainRoutes;

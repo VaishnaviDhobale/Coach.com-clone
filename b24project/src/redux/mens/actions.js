@@ -9,7 +9,7 @@ import {
   
   
   
-  const mensUrl = `https://project-backend-t6y7.onrender.com/mens`;
+  const mensUrl = `https://ruby-defiant-caridea.cyclic.app/mens`;
   
   const requestPending = () => {
     return { type: REQUEST_PENDING };
@@ -34,7 +34,8 @@ import {
     try {
       dispatch(requestPending());
       const apiData = await axios.get(mensUrl);
-      dispatch(getRequestSuccessSidebar(apiData.data));
+      // console.log(apiData.data.data)
+      dispatch(getRequestSuccessSidebar(apiData.data.data));
     } catch {
       dispatch(requestFailure());
     }
@@ -47,9 +48,9 @@ import {
     console.log(paramsObj)
     try {
       dispatch(requestPending());
-      const apiData = await axios.get(`${mensUrl}/?_limit=12}`,paramsObj);
-      // console.log(apiData)
-      dispatch(getRequestSuccess({data : apiData.data,totalData :apiData["headers"]["x-total-count"]}));
+      const apiData = await axios.get(`${mensUrl}`);
+      // console.log(apiData.data.data)
+      dispatch(getRequestSuccess({data : apiData.data.data,totalData :apiData.data.totalData}));
     } catch {
       dispatch(requestFailure());
     }

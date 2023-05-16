@@ -131,11 +131,11 @@ const PaymentPage = () => {
     }, 0)
     .toFixed(2);
 
-  const address = JSON.parse(localStorage.getItem("address"));
+  let address = JSON.parse(localStorage.getItem("address"));
 
   useEffect(() => {
     dispatch(getCartData);
-  }, []);
+  }, [address]);
 
   console.log("address", address);
 
@@ -153,7 +153,7 @@ const PaymentPage = () => {
             try {
               console.log("inside post", cartData);
               let res = await fetch(
-                "https://tame-tan-bee-fez.cyclic.app/order/addOrder",
+                "hhttps://ruby-defiant-caridea.cyclic.app//order/addOrder",
                 {
                   method: "POST",
                   headers: {
@@ -176,7 +176,7 @@ const PaymentPage = () => {
           const deleteAllCart = async () => {
             try {
               await axios.delete(
-                `https://tame-tan-bee-fez.cyclic.app/cart/delete`,
+                `https://ruby-defiant-caridea.cyclic.app/cart/deleteAll`,
                 {
                   headers: {
                     "Content-Type": "application/json",
@@ -211,6 +211,14 @@ const PaymentPage = () => {
     },
     [Razorpay]
   );
+
+  const handleDelete = () => {
+    localStorage.setItem("address", false);
+    address = JSON.parse(localStorage.getItem("address"));
+    console.log(address)
+
+
+  }
 
   return (
     <>
@@ -276,7 +284,9 @@ const PaymentPage = () => {
                       {address.houseNo},{address.area},{address.landmark},
                       {address.city},{address.state},{address.pincode},
                       {address.country}
-                      {<AiFillDelete color="red" size={"25px"} />}
+                      {<AiFillDelete onClick={()=>{
+                        handleDelete()
+                      }} color="red" size={"25px"} />}
                     </li>
                   </ul>
                 ) : (

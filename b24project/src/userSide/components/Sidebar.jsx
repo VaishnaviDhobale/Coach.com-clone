@@ -41,8 +41,8 @@ const Sidebar = ({ getMethod }) => {
   // Preparing params object here to pass correact params
   let paramsObj = {
     category: filterData,
-    _sort :"price",
-    _order : order,
+    sort :"price",
+    order : order,
   };
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const Sidebar = ({ getMethod }) => {
 
   // Sorting Logic
   const handleSorting = (e) => {
-    setOrder(e.target.value);
+    setOrder(+e.target.value);
   };
 
   //Clear filter logic
@@ -189,9 +189,9 @@ const Sidebar = ({ getMethod }) => {
               <input
                 type="radio"
                 name="sort"
-                value="asc"
+                value={1}
                 style={inputStyle}
-                defaultChecked={order === "asc"}
+                defaultChecked={order === 1}
               />
               <label htmlFor="">Low To High</label>
             </Box>
@@ -200,9 +200,9 @@ const Sidebar = ({ getMethod }) => {
               <input
                 type="radio"
                 name="sort"
-                value="desc"
+                value={-1}
                 style={inputStyle}
-                defaultChecked={order === "desc"}
+                defaultChecked={order === -1}
               />
               <label htmlFor="">High To Low</label>
             </Box>
@@ -254,9 +254,9 @@ const Sidebar = ({ getMethod }) => {
                       <input
                         type="radio"
                         name="sort"
-                        value="asc"
+                        value={1}
                         style={inputStyle}
-                        defaultChecked={order === "asc"}
+                        defaultChecked={order === 1}
                       />
                       <label htmlFor="">Low To High</label>
                     </Box>
@@ -265,9 +265,9 @@ const Sidebar = ({ getMethod }) => {
                       <input
                         type="radio"
                         name="sort"
-                        value="desc"
+                        value={-1}
                         style={inputStyle}
-                        defaultChecked={order === "desc"}
+                        defaultChecked={order === -1}
                       />
                       <label htmlFor="">High To Low</label>
                     </Box>

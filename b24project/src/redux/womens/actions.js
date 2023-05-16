@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 
-const womensUrl = `https://project-backend-t6y7.onrender.com/womens`;
+const womensUrl = `https://ruby-defiant-caridea.cyclic.app/womens`;
 
 const requestPending = () => {
   return { type: REQUEST_PENDING };
@@ -38,7 +38,7 @@ export const getSidebarData = async(dispatch) => {
   try {
     dispatch(requestPending());
     const apiData = await axios.get(womensUrl);
-    dispatch(getRequestSuccessSidebar(apiData.data));
+    dispatch(getRequestSuccessSidebar(apiData.data.data));
   } catch {
     dispatch(requestFailure());
   }
@@ -48,11 +48,12 @@ export const getSidebarData = async(dispatch) => {
 
 // Fetching data for womens data 
 export const getWomensData =(paramsObj)=> async(dispatch) => {
-
+  console.log(paramsObj,"tyuxcvsrtyuhgcvbfgfx ")
   try {
     dispatch(requestPending());
-    const apiData = await axios.get(`${womensUrl}/?_limit=16`,paramsObj);
-    dispatch(getRequestSuccess({data : apiData.data,totalData :apiData["headers"]["x-total-count"]}));
+    const apiData = await axios.get(`${womensUrl}/?`,paramsObj);
+    console.log(apiData.data)
+    dispatch(getRequestSuccess({data : apiData.data.data,totalData :apiData.data.totalData}));
   } catch {
     dispatch(requestFailure());
   }

@@ -18,7 +18,7 @@ const Mens = () => {
     <Box>
       <TopNavbar />
       <UserNavbar />
-      <Box display={"grid"} gridTemplateColumns={"0% 1fr"}>
+      <Box display={"flex"}>
         <Sidebar getMethod={getSidebarData} />
         <ProductsData getMethod={getMensData} />
       </Box>

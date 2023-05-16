@@ -16,7 +16,7 @@ const ProductsData = ({ getMethod }) => {
   const paramObj = {
     params: {
       category: searchParams.getAll("category"),
-      _page : page
+      page : page
     },
   };
 
@@ -28,9 +28,9 @@ const ProductsData = ({ getMethod }) => {
 
   useEffect(() => {
     dispatch(getMethod(paramObj));
-    if(searchParams.get("_order")){
-      paramObj.params["_order"] = searchParams.get("_order");
-      paramObj.params["_sort"] = "price"
+    if(+searchParams.get("order")===1 || +searchParams.get("order")===-1 ){
+      paramObj.params["sort"] = "price"
+      paramObj.params["order"] = +searchParams.get("order");
     }
     setSearchparams(paramObj.params)
   }, [searchParams,page]);
@@ -54,12 +54,12 @@ const ProductsData = ({ getMethod }) => {
         md : "repeat(3,1fr)",
         lg : "repeat(4,1fr)"
       }}
-      gap="5px"
+      gap="25px"
       ml= {{
         base : "20px",
         sm : "20px",
         md : "20px",
-        lg : "22%"
+        lg : "50px"
       }}
     >
       {womensData.map((item) => {

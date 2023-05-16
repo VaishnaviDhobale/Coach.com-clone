@@ -11,14 +11,17 @@ const SingleCart = ({
   handleDeleteCart,
   qut,
   paramObj,
+  _id
 }) => {
   const dispatch = useDispatch();
 
   const handleTotalPrice = (e) => {
-    dispatch(patchCartData(id, { qut: +e.target.value })).then(() => {
+    dispatch(patchCartData(_id, { qut: +e.target.value })).then(() => {
       dispatch(getCartData(paramObj));
     });
   };
+
+  console.log(image)
 
   return (
     <Box mb="30px" position={"relative"}>
@@ -30,7 +33,7 @@ const SingleCart = ({
         p="5px"
         borderRadius={"50%"}
         cursor={"pointer"}
-        onClick={() => handleDeleteCart(id)}
+        onClick={() => handleDeleteCart(_id)}
       >
         <AiOutlineClose />
       </Box>
